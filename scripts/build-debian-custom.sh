@@ -39,29 +39,25 @@ lb config\
 	--quiet\
 	--system live\
 	--updates true
-wget -qO config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/calamares.sh
+#wget -qO config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/calamares.sh
 #wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/extra-repositories.sh
 #wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
 #wget -qO config/hooks/normal/grub-settings.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/grub-settings.sh
 wget -qO config/hooks/normal/kernel.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/kernel.sh
 #wget -qO config/hooks/normal/plymouth.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/plymouth.sh
 wget -qO config/hooks/normal/virtualbox-x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/virtualbox-x11.sh
+wget -qO config/hooks/normal/purge.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/purge.sh
 wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/desktop-packages.list
 #cd config/packages.chroot
-#wget -q --show-progress "$(wget -qO- https://api.github.com/repos/f3d-app/f3d/releases|grep browser_download_url|grep -v md5|grep -v nightly|grep x86_64.deb|head -n1|cut -d '"' -f4)"
-#dpkg-name F3D*.deb
+
+# Element PLACEHOLDER
+# FreeTube PLACEHOLDER
+# Keybase PLACEHOLDER
+# Stremio PLACEHOLDER
+# Windscribe PLACEHOLDER
+
 #wget -q --show-progress "$(wget -qO- https://api.github.com/repos/localsend/localsend/releases|grep browser_download_url|grep .deb|head -n1|cut -d '"' -f4)"
 #dpkg-name LocalSend*.deb
-#wget -q --show-progress "$(wget -qO- https://api.github.com/repos/JezerM/web-greeter/releases|grep browser_download_url|grep debian.deb|head -n1|cut -d '"' -f4)"
-#dpkg-name web-greeter*.deb
-#wget -q --show-progress "$(wget -qO- https://api.github.com/repos/bkw777/mainline/releases|grep browser_download_url|grep .deb|head -n1|cut -d '"' -f4)"
-#dpkg-name mainline*.deb
-#wget -q --show-progress https://mxrepo.com/mx/repo/pool/main/x/xfce4-docklike-plugin/"$(wget -qO- https://mxrepo.com/mx/repo/pool/main/x/xfce4-docklike-plugin/|grep amd64.deb|tail -n1|cut -d '"' -f2)"
-#dpkg-name xfce4-docklike-plugin*.deb
-#wget -q --show-progress http://packages.linuxmint.com/pool/main/w/webapp-manager/"$(wget -qO- http://packages.linuxmint.com/pool/main/w/webapp-manager/|grep .deb|tail -n1|cut -d '"' -f4)"
-#dpkg-name webapp-manager*.deb
-#bash <(wget -qO- https://github.com/rauldipeas/debian-custom/raw/main/scripts/cortile.sh)
-#bash <(wget -qO- https://github.com/rauldipeas/debian-custom/raw/main/scripts/picom.sh)
 #cd ../..
 #wget -q --show-progress -O dekuve.zip 'https://www.dropbox.com/scl/fi/erhpzghrhpfcubofnnjdm/dekuve.zip?rlkey=advz5obcky8gm2sekumc3n63v&dl=1'
 #unzip -q dekuve.zip
@@ -71,4 +67,6 @@ wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/
 #mv chroot config/includes.chroot
 #chmod +x config/includes.chroot/usr/local/bin/*
 #find config/includes.chroot/ -name "*.sh" -exec chmod +x {} \;
+mkdir -p config/includes.chroot/etc/skel/.config/dconf
+wget -qO config/includes.chroot/etc/skel/.config/dconf/user https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf.user
 sudo -A lb build 2>&1|tee /tmp/build-debian-custom.log
