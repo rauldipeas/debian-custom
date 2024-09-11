@@ -58,7 +58,9 @@ wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/
 
 #wget -q --show-progress "$(wget -qO- https://api.github.com/repos/localsend/localsend/releases|grep browser_download_url|grep .deb|head -n1|cut -d '"' -f4)"
 #dpkg-name LocalSend*.deb
+
 #cd ../..
+
 #wget -q --show-progress -O dekuve.zip 'https://www.dropbox.com/scl/fi/erhpzghrhpfcubofnnjdm/dekuve.zip?rlkey=advz5obcky8gm2sekumc3n63v&dl=1'
 #unzip -q dekuve.zip
 #rm dekuve.zip
@@ -67,6 +69,7 @@ wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/
 #mv chroot config/includes.chroot
 #chmod +x config/includes.chroot/usr/local/bin/*
 #find config/includes.chroot/ -name "*.sh" -exec chmod +x {} \;
+
 mkdir -p config/includes.chroot/etc/skel/.config/dconf
 wget -qO config/includes.chroot/etc/skel/.config/dconf/user https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf.user
 sudo -A lb build 2>&1|tee /tmp/build-debian-custom.log
