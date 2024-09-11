@@ -6,10 +6,10 @@ cat <<EOF | sudo -A tee /usr/share/applications/install-debian.desktop
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Install DEKUVE
+Name=Install Debian Custom
 GenericName=Calamares Installer
 Exec=install-debian
-Comment=Calamares — Installer for DEKUVE Live
+Comment=Calamares — Installer for Debian Custom Live
 Keywords=calamares;system;install;debian;installer
 Icon=calamares
 Terminal=false

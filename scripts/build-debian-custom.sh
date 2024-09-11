@@ -39,7 +39,6 @@ lb config\
 	--quiet\
 	--system live\
 	--updates true
-#wget -qO config/hooks/normal/balena-etcher.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/balena-etcher.sh
 wget -qO config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/calamares.sh
 #wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/extra-repositories.sh
 #wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
