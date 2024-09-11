@@ -39,27 +39,24 @@ lb config\
 	--quiet\
 	--system live\
 	--updates true
-#wget -qO config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/calamares.sh
+wget -qO config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/calamares.sh
+wget -qO config/hooks/normal/element.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/element.sh
 #wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/extra-repositories.sh
-#wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
+wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
 #wget -qO config/hooks/normal/grub-settings.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/grub-settings.sh
 wget -qO config/hooks/normal/kernel.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/kernel.sh
 #wget -qO config/hooks/normal/plymouth.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/plymouth.sh
 wget -qO config/hooks/normal/virtualbox-x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/virtualbox-x11.sh
 wget -qO config/hooks/normal/purge.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/purge.sh
 wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/desktop-packages.list
-#cd config/packages.chroot
-
-# Element PLACEHOLDER
-# FreeTube PLACEHOLDER
-# Keybase PLACEHOLDER
-# Stremio PLACEHOLDER
-# Windscribe PLACEHOLDER
-
-#wget -q --show-progress "$(wget -qO- https://api.github.com/repos/localsend/localsend/releases|grep browser_download_url|grep .deb|head -n1|cut -d '"' -f4)"
-#dpkg-name LocalSend*.deb
-
-#cd ../..
+cd config/packages.chroot
+wget -q --show-progress "$(wget -qO- https://api.github.com/repos/FreeTubeApp/FreeTube/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d '"' -f4)"
+dpkg-name freetube*.deb
+wget -q --show-progress https://prerelease.keybase.io/keybase_amd64.deb
+dpkg-name keybase*.deb
+wget -q --show-progress -O windscribe_amd64.deb https://prt.windscribe.com/install/desktop/linux_deb_x64
+dpkg-name windscribe*.deb
+cd ../..
 
 #wget -q --show-progress -O dekuve.zip 'https://www.dropbox.com/scl/fi/erhpzghrhpfcubofnnjdm/dekuve.zip?rlkey=advz5obcky8gm2sekumc3n63v&dl=1'
 #unzip -q dekuve.zip
