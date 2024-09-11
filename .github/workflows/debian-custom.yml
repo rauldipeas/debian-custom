@@ -1,0 +1,32 @@
+name: Debian Custom
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore:
+      - '.editorconfig'
+      - 'leiame.md'
+      - 'readme.md'
+      - '*.jpg'
+      - '*.png'
+      - '*.svg'
+      - '_config.yml'
+  schedule:
+    - cron:  '0 */12 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Debian Custom build
+        run: bash scripts/build-debian-custom.sh
+      - name: ISO upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: debian-custom
+          path: /tmp/debian-custom/debian-custom*.iso
+      - name: Log cleanup
+        run: bash -x scripts/actions-cleanup.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
