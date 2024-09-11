@@ -41,7 +41,7 @@ lb config\
 	--updates true
 #wget -qO config/hooks/normal/balena-etcher.hook.chroot https://github.com/rauldipeas/dekuve/raw/main/scripts/balena-etcher.sh
 wget -qO config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/dekuve/raw/main/scripts/calamares.sh
-wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/dekuve/raw/main/scripts/extra-repositories.sh
+#wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/dekuve/raw/main/scripts/extra-repositories.sh
 #wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/dekuve/raw/main/scripts/flathub.sh
 #wget -qO config/hooks/normal/grub-settings.hook.chroot https://github.com/rauldipeas/dekuve/raw/main/scripts/grub-settings.sh
 wget -qO config/hooks/normal/kernel.hook.chroot https://github.com/rauldipeas/dekuve/raw/main/scripts/kernel.sh
