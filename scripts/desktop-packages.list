@@ -2,6 +2,8 @@ apt-transport-https
 bash-completion
 file-roller
 firefox-esr
+gedit
+gnome-calculator
 gnome-session
 gnome-shell-extension-appindicator
 gnome-shell-extension-arc-menu
@@ -9,6 +11,7 @@ gnome-shell-extension-dash-to-panel
 gnome-shell-extension-tiling-assistant
 gnome-software-plugin-flatpak
 gnome-software-plugin-snap
+gnome-themes-extra
 lsb-release
 nautilus
 openssh-client
