@@ -40,7 +40,7 @@ lb config\
 	--system live\
 	--updates true
 wget -qO config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/calamares.sh
-wget -qO config/hooks/normal/element.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/element.sh
+#wget -qO config/hooks/normal/element.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/element.sh
 #wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/extra-repositories.sh
 wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
 #wget -qO config/hooks/normal/grub-settings.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/grub-settings.sh
