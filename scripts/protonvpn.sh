@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-wget -q --show-progress https://repo.protonvpn.com/debian/dists/stable/main/binary-all/"$(wget -qO- https://repo.protonvpn.com/debian/dists/stable/main/binary-all/|grep protonvpn-stable|tail -n1|cut -d'"' -f12)"
+wget -q --show-progress https://repo.protonvpn.com/debian/dists/stable/main/binary-all/"$(wget -qO- https://repo.protonvpn.com/debian/dists/stable/main/binary-all/|grep protonvpn-stable|tail -n1|cut -d'"' -f2)"
 sudo -A apt install ./protonvpn*.deb
 sudo -A apt update
 sudo -A install -y protonvpn-gui
