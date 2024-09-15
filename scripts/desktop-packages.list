@@ -1,9 +1,15 @@
 apt-transport-https
+baobab
 bash-completion
+cheese
+evince
 file-roller
 firefox-esr
+gdebi
 gedit
 gnome-calculator
+gnome-disk-utility
+gnome-screenshot
 gnome-session
 gnome-shell-extension-appindicator
 gnome-shell-extension-arc-menu
@@ -11,6 +17,7 @@ gnome-shell-extension-dash-to-panel
 gnome-shell-extension-tiling-assistant
 gnome-software-plugin-flatpak
 gnome-software-plugin-snap
+gnome-system-monitor
 gnome-themes-extra
 lsb-release
 nautilus
@@ -19,4 +26,5 @@ papirus-icon-theme
 pipx
 shotwell
 tilix
+vlc
 wget
