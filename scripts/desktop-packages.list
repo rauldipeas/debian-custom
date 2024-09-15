@@ -16,6 +16,7 @@ lsb-release
 nautilus
 openssh-client
 papirus-icon-theme
+pipx
 shotwell
 tilix
 wget
