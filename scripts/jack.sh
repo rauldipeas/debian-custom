@@ -8,4 +8,3 @@ Pin-Priority: -10
 EOF
 sudo -A apt install -y jackd2
 sudo -A rm /etc/apt/preferences.d/qjackctl.pref
-fi
