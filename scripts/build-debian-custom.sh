@@ -46,7 +46,9 @@ wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/r
 wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
 wget -qO config/hooks/normal/gnome-shell-extensions.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/gnome-shell-extensions.sh
 #wget -qO config/hooks/normal/grub-settings.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/grub-settings.sh
+wget -qO config/hooks/normal/jack.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/jack.sh
 wget -qO config/hooks/normal/kernel.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/kernel.sh
+wget -qO config/hooks/normal/keybase.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/keybase.sh
 #wget -qO config/hooks/normal/plymouth.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/plymouth.sh
 wget -qO config/hooks/normal/protonvpn.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/protonvpn.sh
 wget -qO config/hooks/normal/purge.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/purge.sh
@@ -58,8 +60,6 @@ wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/
 cd config/packages.chroot
 wget -q --show-progress "$(wget -qO- https://api.github.com/repos/FreeTubeApp/FreeTube/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d'"' -f4)"
 dpkg-name freetube*.deb
-wget -q --show-progress https://prerelease.keybase.io/keybase_amd64.deb
-dpkg-name keybase*.deb
 cd ../..
 
 #wget -q --show-progress -O dekuve.zip 'https://www.dropbox.com/scl/fi/erhpzghrhpfcubofnnjdm/dekuve.zip?rlkey=advz5obcky8gm2sekumc3n63v&dl=1'

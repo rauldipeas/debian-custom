@@ -27,6 +27,9 @@ nohang
 openssh-client
 papirus-icon-theme
 pipx
+pulseaudio
+pulseaudio-module-bluetooth
+pulseaudio-module-jack
 shotwell
 synaptic
 tilix
