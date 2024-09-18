@@ -12,7 +12,7 @@ EOF
 cat <<EOF |sudo -A tee /etc/default/grub.d/rtcqs.cfg>/dev/null
 GRUB_CMDLINE_LINUX_DEFAULT="cpufreq.default_governor=performance mitigations=off preempt=full quiet splash threadirqs zswap.enabled=1 zswap.compressor=lz4"
 EOF
-sudo -A update-grub
+#sudo -A update-grub
 cat <<EOF |sudo -A tee -a /etc/initramfs-tools/modules>/dev/null
 echo lz4
 echo lz4_compress
