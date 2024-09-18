@@ -53,6 +53,7 @@ wget -qO config/hooks/normal/purge.hook.chroot https://github.com/rauldipeas/deb
 wget -qO config/hooks/normal/rtcqs.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/rtcqs.sh
 wget -qO config/hooks/normal/topgrade.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/topgrade.sh
 wget -qO config/hooks/normal/virtualbox-x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/virtualbox-x11.sh
+wget -qO config/hooks/normal/x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/x11.sh
 wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/desktop-packages.list
 cd config/packages.chroot
 wget -q --show-progress "$(wget -qO- https://api.github.com/repos/FreeTubeApp/FreeTube/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d'"' -f4)"

@@ -2,6 +2,7 @@
 set -e
 # audio group
 cat <<EOF |sudo -A tee -a /etc/adduser.conf>/dev/null
+ADD_EXTRA_GROUPS=1
 EXTRA_GROUPS="audio"
 EOF
 # swappiness
