@@ -1,7 +1,9 @@
 apt-transport-https
 baobab
 bash-completion
+bat
 cheese
+dropbear
 evince
 file-roller
 firefox-esr
@@ -20,11 +22,15 @@ gnome-software-plugin-snap
 gnome-system-monitor
 gnome-themes-extra
 lsb-release
+micro
 nautilus
+nohang
 openssh-client
 papirus-icon-theme
 pipx
 shotwell
+synaptic
 tilix
+timeshift
 vlc
 wget
