@@ -50,7 +50,7 @@ wget -qO config/hooks/normal/gnome-shell-extensions.hook.chroot https://github.c
 wget -qO config/hooks/normal/jack.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/jack.sh
 wget -qO config/hooks/normal/kernel.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/kernel.sh
 wget -qO config/hooks/normal/keybase.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/keybase.sh
-#wget -qO config/hooks/normal/plymouth.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/plymouth.sh
+wget -qO config/hooks/normal/plymouth.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/plymouth.sh
 wget -qO config/hooks/normal/protonvpn.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/protonvpn.sh
 wget -qO config/hooks/normal/purge.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/purge.sh
 wget -qO config/hooks/normal/rtcqs.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/rtcqs.sh
