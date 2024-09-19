@@ -8,12 +8,13 @@ file-roller
 firefox-esr
 gdebi
 gedit
+gir1.2-gda-5.0
+gir1.2-gsound-1.0
 gnome-calculator
 gnome-disk-utility
 gnome-screenshot
 gnome-session
 gnome-shell-extension-appindicator
-gnome-shell-extension-arc-menu
 gnome-shell-extension-dash-to-panel
 gnome-shell-extension-tiling-assistant
 gnome-software-plugin-flatpak
