@@ -6,9 +6,11 @@ cheese
 evince
 file-roller
 firefox-esr
+fonts-noto-color-emoji
 gdebi
 gedit
 gir1.2-gda-5.0
+gir1.2-gmenu-3.0
 gir1.2-gsound-1.0
 gnome-calculator
 gnome-disk-utility
