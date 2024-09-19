@@ -6,6 +6,7 @@ cheese
 evince
 file-roller
 firefox-esr
+fonts-cantarell
 fonts-noto-color-emoji
 gdebi
 gedit
@@ -31,6 +32,7 @@ nohang
 openssh-client
 papirus-icon-theme
 pipx
+plymouth-themes
 pulseaudio
 pulseaudio-module-bluetooth
 pulseaudio-module-jack

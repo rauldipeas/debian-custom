@@ -5,5 +5,5 @@ unzip debian-mac-style.zip
 rm debian-mac-style.zip
 sudo -A cp -R debian-mac-style /usr/share/plymouth/themes/
 rm -r debian-mac-style
-sudo -A plymouth-set-default-theme debian-mac-style
+sudo -A plymouth-set-default-theme -R debian-mac-style
 sudo -A update-initramfs -u
