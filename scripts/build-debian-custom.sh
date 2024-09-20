@@ -61,6 +61,12 @@ wget -qO config/package-lists/desktop.list.chroot https://github.com/rauldipeas/
 cd config/packages.chroot
 wget -q --show-progress "$(wget -qO- https://api.github.com/repos/FreeTubeApp/FreeTube/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d'"' -f4)"
 dpkg-name freetube*.deb
+wget -q --show-progress http://ftp.us.debian.org/debian/pool/main/s/sparkleshare/sparkleshare_3.28+git20190525+cf446c0-3_all.deb
+dpkg-name sparkleshare*.deb
+wget -q --show-progress http://ftp.us.debian.org/debian/pool/main/w/webkit2-sharp/libwebkit2-sharp-4.0-cil_2.10.9+git20160917-1.1_amd64.deb
+dpkg-name libwebkit2-sharp*.deb
+wget -q --show-progress http://ftp.us.debian.org/debian/pool/main/a/appindicator3-sharp/libappindicator3-0.1-cil_12.10.0+git20151221-5.1_amd64.deb
+dpkg-name libappindicator*.deb
 cd ../..
 
 #wget -q --show-progress -O dekuve.zip 'https://www.dropbox.com/scl/fi/erhpzghrhpfcubofnnjdm/dekuve.zip?rlkey=advz5obcky8gm2sekumc3n63v&dl=1'
