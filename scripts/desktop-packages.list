@@ -3,6 +3,7 @@ baobab
 bash-completion
 bat
 cheese
+clapper
 dropbear
 evince
 file-roller
@@ -21,6 +22,7 @@ gnome-shell-extension-appindicator
 gnome-shell-extension-dash-to-panel
 gnome-shell-extension-tiling-assistant
 gnome-software-plugin-flatpak
+gnome-software-plugin-snap
 gnome-system-monitor
 gnome-themes-extra
 lsb-release
@@ -39,5 +41,4 @@ shotwell
 synaptic
 tilix
 timeshift
-vlc
 wget
