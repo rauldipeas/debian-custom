@@ -45,6 +45,7 @@ wget -qO config/hooks/normal/cfs-zen-tweaks.hook.chroot https://github.com/rauld
 #wget -qO config/hooks/normal/element.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/element.sh
 wget -qO config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/extra-repositories.sh
 wget -qO config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
+wget -qO config/hooks/normal/fluent-gtk.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/fluent-gtk.sh
 wget -qO config/hooks/normal/gnome-shell-extensions.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/gnome-shell-extensions.sh
 #wget -qO config/hooks/normal/grub-settings.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/grub-settings.sh
 wget -qO config/hooks/normal/jack.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/jack.sh
