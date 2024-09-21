@@ -11,10 +11,10 @@ pipx install gnome-extensions-cli --system-site-packages
 "$HOME"/.local/bin/gext install forge@jmmaranan.com
 #pano
 "$HOME"/.local/bin/gext install pano@elhan.io
-#status-area-horizontal-spacing
+#status area horizontal spacing
 "$HOME"/.local/bin/gext install status-area-horizontal-spacing@mathematical.coffee.gmail.com
-#user-themes
+#user themes
 "$HOME"/.local/bin/gext install user-theme@gnome-shell-extensions.gcampax.github.com
-mkdir -p /etc/skel/.local/share/gnome-shell
-mv /root/.local/share/gnome-shell/extensions /etc/skel/.local/share/gnome-shell/
+mkdir -p /opt/custom-user-settings/gnome-shell
+mv /root/.local/share/gnome-shell/extensions /opt/custom-user-settings/gnome-shell/
 rm -rf "$HOME"/.*

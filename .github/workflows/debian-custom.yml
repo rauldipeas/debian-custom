@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Debian Custom build
-        run: bash scripts/build-debian-custom.sh
+        run: bash scripts/build.sh
       - name: ISO upload
         uses: actions/upload-artifact@v4
         with:

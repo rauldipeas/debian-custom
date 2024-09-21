@@ -10,4 +10,3 @@ sudo ./install.sh\
 cd ..
 rm -r Fluent-gtk-theme
 sudo apt autoremove --purge -y sassc
-sudo ln -s /usr/share/themes/Fluent-Dark-compact/gtk-4.0 /etc/skel/.config/gtk-4.0
