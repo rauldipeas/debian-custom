@@ -4,9 +4,9 @@ bash-completion
 bat
 cheese
 clapper
+curl
 dropbear
 evince
-firefox-esr
 fonts-cantarell
 fonts-noto-color-emoji
 fonts-quicksand
@@ -27,7 +27,6 @@ gnome-system-monitor
 gnome-themes-extra
 gtk2-engines-murrine
 lsb-release
-micro
 nala
 nautilus
 nohang

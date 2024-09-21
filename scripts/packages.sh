@@ -10,5 +10,5 @@ wget -q --show-progress https://github.com/rauldipeas/debian-custom/raw/main/ass
 #wget -q --show-progress "$(wget -qO- https://api.github.com/repos/TheAssassin/AppImageLauncher/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d'"' -f4)"
 #dpkg-name appimagelauncher*.deb
 #freetube
-wget -q --show-progress "$(wget -qO- https://api.github.com/repos/FreeTubeApp/FreeTube/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d'"' -f4)"
-dpkg-name freetube*.deb
+#wget -q --show-progress "$(wget -qO- https://api.github.com/repos/FreeTubeApp/FreeTube/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d'"' -f4)"
+#dpkg-name freetube*.deb
