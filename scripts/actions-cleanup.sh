@@ -8,10 +8,10 @@ set -e
 #fi
 
 # Install
-#wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg|sudo -A gpg --dearmor -o /etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg>/dev/null
+#wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg>/dev/null
 #echo 'deb [arch=amd64] https://cli.github.com/packages stable main'|sudo tee /etc/apt/sources.list.d/github-cli.list>/dev/null
-#sudo -A apt update
-#sudo -A apt install -y gh
+#sudo apt update
+#sudo apt install -y gh
 
 # Actions cleanup
 PROJECT='rauldipeas/debian-custom'
