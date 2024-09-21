@@ -6,7 +6,6 @@ cheese
 clapper
 dropbear
 evince
-file-roller
 firefox-esr
 fonts-cantarell
 fonts-noto-color-emoji
@@ -25,6 +24,7 @@ gnome-software-plugin-flatpak
 gnome-software-plugin-snap
 gnome-system-monitor
 gnome-themes-extra
+gtk2-engines-murrine
 lsb-release
 micro
 nala
