@@ -9,7 +9,7 @@ if ! [ -f "\$HOME"/.config/dconf/user ];then
     cp /opt/custom-user-settings/dconf.user "\$HOME"/.config/dconf/user
 fi
 if ! [ -d "\$HOME"/.local/share/gnome-shell/extensions ];then
-    mkdir -p "\$HOME"/.local/share/
+    mkdir -p "\$HOME"/.local/share
     cp -r /opt/custom-user-settings/gnome-shell "\$HOME"/.local/share/
 fi
 if ! [ -d "\$HOME"/.config/gtk-4.0 ];then
@@ -18,3 +18,14 @@ if ! [ -d "\$HOME"/.config/gtk-4.0 ];then
 fi
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
+cat <<EOF |sudo tee /etc/rc.local
+#!/bin/bash
+set -e
+sudo chown -R -v "\$USER"\
+    /opt/am\
+    /opt/freetube\
+    /opt/rustdesk\
+    /opt/topgrade\
+    /opt/zen-browser
+EOF
+sudo chmod -x /etc/rc.local
