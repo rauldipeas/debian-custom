@@ -21,7 +21,7 @@ EOF
 cat <<EOF |sudo tee /etc/rc.local
 #!/bin/bash
 set -e
-sudo chown -R -v "\$USER"\
+sudo chown -R -v "\$(ls /home)"\
     /opt/am\
     /opt/freetube\
     /opt/rustdesk\
