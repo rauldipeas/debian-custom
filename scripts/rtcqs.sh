@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 # audio group
-cat <<EOF |sudo tee -a /etc/adduser.conf>/dev/null
-ADD_EXTRA_GROUPS=1
-EXTRA_GROUPS="audio"
-EOF
+#cat <<EOF |sudo tee -a /etc/adduser.conf>/dev/null
+#ADD_EXTRA_GROUPS=1
+#EXTRA_GROUPS="audio"
+#EOF
 # swappiness
 cat <<EOF |sudo tee -a /etc/sysctl.d/swappiness.conf>/dev/null
 vm.swappiness = 10

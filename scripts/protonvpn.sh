@@ -4,3 +4,4 @@ wget -q --show-progress https://repo.protonvpn.com/debian/dists/stable/main/bina
 sudo apt install -y ./protonvpn*.deb
 sudo apt update
 sudo apt install -y protonvpn-gui
+rm protonvpn*.deb

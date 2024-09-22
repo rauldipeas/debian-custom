@@ -30,3 +30,11 @@ sudo chown -R -v "\$(ls /home)"\
 sudo rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
+cat <<EOF |sudo tee /usr/local/bin/reset-user-settings
+rm -r\
+    "\$HOME"/.config/dconf/user\
+    "\$HOME"/.config/gtk-4.0\
+    "\$HOME"/.local/share/gnome-shell/extensions
+sudo shutdown -r 0
+EOF
+sudo chmod +x /usr/local/bin/reset-user-settings
