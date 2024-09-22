@@ -28,4 +28,4 @@ sudo chown -R -v "\$USER"\
     /opt/topgrade\
     /opt/zen-browser
 EOF
-sudo chmod -x /etc/rc.local
+sudo chmod +x /etc/rc.local
