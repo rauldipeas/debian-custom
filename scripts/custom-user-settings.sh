@@ -27,5 +27,6 @@ sudo chown -R -v "\$(ls /home)"\
     /opt/rustdesk\
     /opt/topgrade\
     /opt/zen-browser
+sudo rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
