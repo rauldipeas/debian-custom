@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 wget -qO /tmp/debian-custom/config/hooks/normal/am.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/am.sh
-wget -qO /tmp/debian-custom/config/hooks/normal/armcord.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/armcord.sh
+#wget -qO /tmp/debian-custom/config/hooks/normal/armcord.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/armcord.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/bat.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/bat.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/calamares.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/calamares.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/cfs-zen-tweaks.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/cfs-zen-tweaks.sh
