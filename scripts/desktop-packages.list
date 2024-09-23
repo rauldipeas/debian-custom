@@ -2,7 +2,6 @@ alsa-utils
 apt-transport-https
 baobab
 bash-completion
-bat
 cheese
 clapper
 curl
@@ -32,6 +31,7 @@ nautilus
 nohang
 openssh-client
 papirus-icon-theme
+pavucontrol
 pipx
 plymouth-themes
 pulseaudio

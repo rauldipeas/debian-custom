@@ -23,6 +23,7 @@ cat <<EOF |sudo tee /etc/rc.local>/dev/null
 set -e
 sudo chown -R -v "\$(ls /home)"\
     /opt/am\
+    /opt/bat\
     /opt/freetube\
     /opt/rustdesk\
     /opt/topgrade\
