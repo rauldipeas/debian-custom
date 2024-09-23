@@ -33,9 +33,6 @@ openssh-client
 papirus-icon-theme
 pipx
 plymouth-themes
-pulseaudio
-pulseaudio-module-bluetooth
-pulseaudio-module-jack
 qt5-gtk2-platformtheme
 shotwell
 synaptic
