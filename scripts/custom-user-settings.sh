@@ -2,7 +2,7 @@
 set -e
 sudo mkdir -p /opt/custom-user-settings
 wget -qO /opt/custom-user-settings/dconf.user https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf.user
-cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh
+cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh>/dev/null
 if ! [ -f "\$HOME"/.config/dconf/user ];then
     wget -qO /opt/custom-user-settings/dconf.user https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf.user
     mkdir -p "\$HOME"/.config/dconf
@@ -18,7 +18,7 @@ if ! [ -d "\$HOME"/.config/gtk-4.0 ];then
 fi
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
-cat <<EOF |sudo tee /etc/rc.local
+cat <<EOF |sudo tee /etc/rc.local>/dev/null
 #!/bin/bash
 set -e
 sudo chown -R -v "\$(ls /home)"\
@@ -26,12 +26,13 @@ sudo chown -R -v "\$(ls /home)"\
     /opt/freetube\
     /opt/rustdesk\
     /opt/topgrade\
-    /opt/zen-browser
+    /opt/zen-browser\
+    /usr/local/share/applications/*-AM.desktop
 echo y|am --icons --all
 sudo rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
-cat <<EOF |sudo tee /usr/local/bin/reset-user-settings
+cat <<EOF |sudo tee /usr/local/bin/reset-user-settings>/dev/null
 rm -r\
     "\$HOME"/.config/dconf/user\
     "\$HOME"/.config/gtk-4.0\

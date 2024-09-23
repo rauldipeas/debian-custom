@@ -17,4 +17,3 @@ pipx install gnome-extensions-cli --system-site-packages
 "$HOME"/.local/bin/gext install user-theme@gnome-shell-extensions.gcampax.github.com
 mkdir -p /opt/custom-user-settings/gnome-shell
 mv /root/.local/share/gnome-shell/extensions /opt/custom-user-settings/gnome-shell/
-rm -rf "$HOME"/.*

@@ -15,7 +15,7 @@ wget -qO /tmp/debian-custom/config/hooks/normal/kernel.hook.chroot https://githu
 wget -qO /tmp/debian-custom/config/hooks/normal/keybase.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/keybase.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/plymouth.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/plymouth.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/protonvpn.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/protonvpn.sh
-wget -qO /tmp/debian-custom/config/hooks/normal/pulseaudio.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/pulseaudio.sh
+#wget -qO /tmp/debian-custom/config/hooks/normal/pulseaudio.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/pulseaudio.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/purge.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/purge.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/rtcqs.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/rtcqs.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/rustdesk.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/rustdesk.sh
@@ -23,3 +23,4 @@ wget -qO /tmp/debian-custom/config/hooks/normal/topgrade.hook.chroot https://git
 wget -qO /tmp/debian-custom/config/hooks/normal/virtualbox-x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/virtualbox-x11.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/x11.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/zen-browser.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/zen-browser.sh
+wget -qO /tmp/debian-custom/config/hooks/normal/zz-clean-root.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/clean-root.sh
