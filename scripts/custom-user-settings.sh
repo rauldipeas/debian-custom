@@ -12,10 +12,6 @@ if ! [ -d "\$HOME"/.config/gtk-4.0 ];then
     mkdir -p "\$HOME"/.config
     ln -s /usr/share/themes/Fluent-Dark-compact/gtk-4.0 "\$HOME"/.config/gtk-4.0
 fi
-if ! [ -d "\$HOME"/.config/systemd/user/pipewire.service ];then
-    mkdir -p "\$HOME"/.config/systemd/user
-    ln -s /dev/null "\$HOME"/.config/systemd/user/pipewire.service
-fi
 if ! [ -d "\$HOME"/.local/share/gnome-shell/extensions ];then
     mkdir -p "\$HOME"/.local/share
     cp -r /opt/custom-user-settings/gnome-shell "\$HOME"/.local/share/
