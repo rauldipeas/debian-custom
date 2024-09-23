@@ -24,9 +24,12 @@ set -e
 sudo chown -R -v "\$(ls /home)"\
     /opt/am\
     /opt/bat\
+    /opt/casterr\
     /opt/freetube\
+    /opt/mission-center\
     /opt/rustdesk\
     /opt/topgrade\
+    /opt/zap\
     /opt/zen-browser\
     /usr/local/share/applications/*-AM.desktop
 echo y|am --icons --all
