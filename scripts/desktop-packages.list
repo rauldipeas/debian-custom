@@ -16,7 +16,6 @@ gir1.2-gmenu-3.0
 gir1.2-gsound-1.0
 gnome-calculator
 gnome-disk-utility
-gnome-screenshot
 gnome-session
 gnome-shell-extension-appindicator
 gnome-shell-extension-dash-to-panel
@@ -43,3 +42,4 @@ synaptic
 tilix
 timeshift
 wget
+xz-utils

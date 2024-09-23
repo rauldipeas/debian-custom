@@ -6,8 +6,6 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl
 # Mozilla Firefox
 wget -qO- https://packages.mozilla.org/apt/repo-signing-key.gpg|sudo gpg --dearmor -o /usr/share/keyrings/packages.mozilla.org.gpg>/dev/null
 echo 'deb [signed-by=/usr/share/keyrings/packages.mozilla.org.gpg] https://packages.mozilla.org/apt mozilla main'|sudo tee /etc/apt/sources.list.d/mozilla.list>/dev/null
-#cat <<EOF |sudo tee /etc/apt/preferences.d/mozilla
-#Package: *
-#Pin: origin packages.mozilla.org
-#Pin-Priority: 1000
-#EOF
+# KXStudio
+wget -cq --show-progress http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/"$(wget -qO- http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/|grep all.deb|tail -n1|cut -d '"' -f8)"
+sudo apt install ./kxstudio-repos*.deb
