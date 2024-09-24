@@ -13,10 +13,10 @@ lb config\
 	--compression xz\
 	--debconf-frontend noninteractive\
 	--debian-installer none\
-	--debian-installer-distribution trixie\
-	--distribution trixie\
-	--distribution-binary trixie\
-	--distribution-chroot trixie\
+	--debian-installer-distribution bookworm\
+	--distribution bookworm\
+	--distribution-binary bookworm\
+	--distribution-chroot bookworm\
 	--image-name debian-custom\
 	--iso-application 'Debian Custom'\
 	--iso-publisher 'Debian Custom; https://rauldipeas.surge.sh/debian-custom; debian-custom.rauldipeas@lock.email'\
@@ -24,7 +24,7 @@ lb config\
 	--mirror-bootstrap 'https://deb.debian.org/debian/'\
 	--mirror-chroot 'http://deb.debian.org/debian/'\
 	--mirror-binary 'http://deb.debian.org/debian/'\
-	--parent-distribution-binary trixie\
+	--parent-distribution-binary bookworm\
 	--quiet\
 	--system live\
 	--updates true
