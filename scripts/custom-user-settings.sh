@@ -25,6 +25,7 @@ sudo chown -R "\$(ls /home)"\
     /opt/am\
     /opt/bat\
     /opt/casterr\
+    /opt/fd\
     /opt/freetube\
     /opt/mission-center\
     /opt/rustdesk\

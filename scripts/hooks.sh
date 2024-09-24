@@ -8,6 +8,7 @@ wget -qO /tmp/debian-custom/config/hooks/normal/casterr.hook.chroot https://gith
 wget -qO /tmp/debian-custom/config/hooks/normal/cfs-zen-tweaks.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/cfs-zen-tweaks.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/custom-user-settings.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/custom-user-settings.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/extra-repositories.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/extra-repositories.sh
+wget -qO /tmp/debian-custom/config/hooks/normal/fd.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/fd.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/flathub.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/flathub.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/fluent-gtk.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/fluent-gtk.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/freetube.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/freetube.sh
