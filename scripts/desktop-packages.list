@@ -24,6 +24,7 @@ gnome-software-plugin-flatpak
 gnome-software-plugin-snap
 gnome-themes-extra
 gtk2-engines-murrine
+lightdm
 lsb-release
 nala
 nautilus
