@@ -21,7 +21,7 @@ EOF
 cat <<EOF |sudo tee /etc/rc.local>/dev/null
 #!/bin/bash
 set -e
-sudo chown -R -v "\$(ls /home)"\
+sudo chown -R "\$(ls /home)"\
     /opt/am\
     /opt/bat\
     /opt/casterr\
@@ -32,7 +32,6 @@ sudo chown -R -v "\$(ls /home)"\
     /opt/zap\
     /opt/zen-browser\
     /usr/local/share/applications/*-AM.desktop
-echo y|am --icons --all
 sudo rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
