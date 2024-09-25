@@ -17,7 +17,7 @@ wget -qO /tmp/debian-custom/config/hooks/normal/gnome-shell-extensions.hook.chro
 wget -qO /tmp/debian-custom/config/hooks/normal/jack.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/jack.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/kernel.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/kernel.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/keybase.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/keybase.sh
-wget -qO /tmp/debian-custom/config/hooks/normal/lightdm.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/lightdm.sh
+#wget -qO /tmp/debian-custom/config/hooks/normal/lightdm.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/lightdm.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/mission-center.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/mission-center.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/plymouth.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/plymouth.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/protonvpn.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/protonvpn.sh
