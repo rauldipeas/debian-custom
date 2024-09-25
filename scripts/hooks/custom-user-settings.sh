@@ -1,8 +1,20 @@
 #!/bin/bash
 set -e
-sudo mkdir -p /opt/custom-user-settings
+sudo mkdir -p /opt/custom-user-settings/bash
 wget -qO /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf-settings.ini
+wget -qO /opt/custom-user-settings/bash/bashrc https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/bashrc
+wget -qO /opt/custom-user-settings/bash/bash-preexec.sh https://github.com/rcaloras/bash-preexec/raw/master/bash/bash-preexec.sh
+wget -qO /opt/custom-user-settings/bash/atuin.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/atuin.bash
+wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/liquidprompt.bash
 cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh>/dev/null
+if ! [ -d "\$HOME"/.bashrc.d ];then
+    mkdir -p "\$HOME"/.bashrc.d
+    mv "\$HOME"/.bashrc "\$HOME"/.bashrc.d/rc.bash
+    cp /opt/custom-user-settings/bash/bashrc "\$HOME"/.bashrc
+    cp /opt/custom-user-settings/bash/*.bash "\$HOME"/.bashrc.d/
+    cp /usr/share/liquidprompt/liquidpromptrc-dist "\$HOME"/.config/liquidpromptrc
+    sed -i 's/debian.theme/powerline.theme/g' "\$HOME"/.config/liquidpromptrc
+fi
 if ! [ -f "\$HOME"/.config/dconf/user ];then
     dconf load / < /opt/custom-user-settings/dconf-settings.ini
     sudo dconf load / < /opt/custom-user-settings/dconf-settings.ini
@@ -43,6 +55,7 @@ EOF
 sudo chmod +x /etc/rc.local
 cat <<EOF |sudo tee /usr/local/bin/reset-user-settings>/dev/null
 rm -r\
+    "\$HOME"/.bashrc.d
     "\$HOME"/.config/dconf/user\
     "\$HOME"/.config/gtk-4.0\
     "\$HOME"/.local/share/gnome-shell/extensions

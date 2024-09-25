@@ -14,4 +14,4 @@ echo lz4_compress
 EOF
 sudo update-initramfs -u -k all
 # cpu-dma-latency
-wget -qO- https://raw.githubusercontent.com/Ardour/ardour/master/tools/udev/99-cpu-dma-latency.rules|sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules
+wget -qO- https://github.com/Ardour/ardour/raw/master/tools/udev/99-cpu-dma-latency.rules|sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules>/dev/null

@@ -9,6 +9,7 @@ dropbear
 evince
 fonts-cantarell
 fonts-noto-color-emoji
+fonts-powerline
 fonts-quicksand
 gedit
 gir1.2-gda-5.0
@@ -24,7 +25,7 @@ gnome-software-plugin-flatpak
 gnome-software-plugin-snap
 gnome-themes-extra
 gtk2-engines-murrine
-lightdm
+liquidprompt
 lsb-release
 nala
 nautilus
