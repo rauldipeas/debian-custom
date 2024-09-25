@@ -26,7 +26,7 @@ wget -qO /tmp/debian-custom/config/hooks/normal/rtcqs.hook.chroot https://github
 wget -qO /tmp/debian-custom/config/hooks/normal/rustdesk.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/rustdesk.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/topgrade.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/topgrade.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/virtualbox-x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/virtualbox-x11.sh
-wget -qO /tmp/debian-custom/config/hooks/normal/x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/x11.sh
+#wget -qO /tmp/debian-custom/config/hooks/normal/x11.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/x11.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/zap.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/zap.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/zen-browser.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/zen-browser.sh
 wget -qO /tmp/debian-custom/config/hooks/normal/zz-alsa-firmware.hook.chroot https://github.com/rauldipeas/debian-custom/raw/main/scripts/alsa-firmware.sh
