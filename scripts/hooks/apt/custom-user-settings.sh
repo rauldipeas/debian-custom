@@ -1,16 +1,20 @@
 #!/bin/bash
 set -e
 sudo mkdir -p /opt/custom-user-settings
-wget -qO /opt/custom-user-settings/dconf.user https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf.user
+wget -qO /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf-settings.ini
 cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh>/dev/null
 if ! [ -f "\$HOME"/.config/dconf/user ];then
-    wget -qO /opt/custom-user-settings/dconf.user https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf.user
-    mkdir -p "\$HOME"/.config/dconf
-    cp /opt/custom-user-settings/dconf.user "\$HOME"/.config/dconf/user
+    dconf load / < /opt/custom-user-settings/dconf-settings.ini
+    sudo dconf load / < /opt/custom-user-settings/dconf-settings.ini
 fi
 if ! [ -d "\$HOME"/.config/gtk-4.0 ];then
     mkdir -p "\$HOME"/.config
-    ln -s /usr/share/themes/Fluent-Dark-compact/gtk-4.0 "\$HOME"/.config/gtk-4.0
+    if [ \$(gsettings get org.gnome.desktop.interface gtk-theme|cut -d \' -f2) = Fluent-Dark-compact ];then
+        echo Fluent-Dark-compact selecionado
+        ln -s /usr/share/themes/Fluent-Dark-compact/gtk-4.0 "\$HOME"/.config/gtk-4.0
+        else
+        echo Fluent-Dark-compact não selecionado
+    fi
 fi
 if ! [ -d "\$HOME"/.local/share/gnome-shell/extensions ];then
     mkdir -p "\$HOME"/.local/share
@@ -27,6 +31,7 @@ sudo chown -R "\$(ls /home)"\
     /opt/casterr\
     /opt/fd\
     /opt/freetube\
+    /opt/got\
     /opt/mission-center\
     /opt/rustdesk\
     /opt/topgrade\
