@@ -5,7 +5,7 @@ wget -qO /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldip
 wget -qO /opt/custom-user-settings/bash/bashrc https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/bashrc
 wget -qO /opt/custom-user-settings/bash/bash-preexec.sh https://github.com/rcaloras/bash-preexec/raw/master/bash-preexec.sh
 wget -qO /opt/custom-user-settings/bash/atuin.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/atuin.bash
-wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/liquidprompt.bash
+wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/liquidprompt.bash
 cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh>/dev/null
 if ! [ -d "\$HOME"/.bashrc.d ];then
     mkdir -p "\$HOME"/.bashrc.d
