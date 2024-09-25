@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
-sudo mkdir -p /opt/custom-user-settings/bash
-wget -qO /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf-settings.ini
-wget -qO /opt/custom-user-settings/bash/bashrc https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/bashrc
-wget -qO /opt/custom-user-settings/bash/bash-preexec.sh https://github.com/rcaloras/bash-preexec/raw/master/bash/bash-preexec.sh
-wget -qO /opt/custom-user-settings/bash/atuin.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/atuin.bash
-wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/liquidprompt.bash
-cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh>/dev/null
+sudo mkdir -pv /opt/custom-user-settings/bash
+wget -O /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf-settings.ini
+wget -O /opt/custom-user-settings/bash/bashrc https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/bashrc
+wget -O /opt/custom-user-settings/bash/bash-preexec.sh https://github.com/rcaloras/bash-preexec/raw/master/bash/bash-preexec.sh
+wget -O /opt/custom-user-settings/bash/atuin.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/atuin.bash
+wget -O /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rcaloras/bash-preexec/raw/master/bash/liquidprompt.bash
+cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh
 if ! [ -d "\$HOME"/.bashrc.d ];then
     mkdir -p "\$HOME"/.bashrc.d
     mv "\$HOME"/.bashrc "\$HOME"/.bashrc.d/rc.bash
@@ -31,7 +31,7 @@ if ! [ -d "\$HOME"/.local/share/gnome-shell/extensions ];then
 fi
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
-cat <<EOF |sudo tee /etc/rc.local>/dev/null
+cat <<EOF |sudo tee /etc/rc.local
 #!/bin/bash
 set -e
 sudo chown -R "\$(ls /home)"\
@@ -49,8 +49,8 @@ sudo chown -R "\$(ls /home)"\
     /usr/local/share/applications/*-AM.desktop
 sudo rm /etc/rc.local
 EOF
-sudo chmod +x /etc/rc.local
-cat <<EOF |sudo tee /usr/local/bin/reset-user-settings>/dev/null
+sudo chmod +x /etc/rc.local -v
+cat <<EOF |sudo tee /usr/local/bin/reset-user-settings
 rm -r\
     "\$HOME"/.bashrc.d
     "\$HOME"/.config/dconf/user\
@@ -58,4 +58,4 @@ rm -r\
     "\$HOME"/.local/share/gnome-shell/extensions
 sudo shutdown -r 0
 EOF
-sudo chmod +x /usr/local/bin/reset-user-settings
+sudo chmod +x /usr/local/bin/reset-user-settings -v
