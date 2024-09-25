@@ -22,10 +22,7 @@ fi
 if ! [ -d "\$HOME"/.config/gtk-4.0 ];then
     mkdir -p "\$HOME"/.config
     if [ \$(gsettings get org.gnome.desktop.interface gtk-theme|cut -d \' -f2) = Fluent-Dark-compact ];then
-        echo Fluent-Dark-compact selecionado
         ln -s /usr/share/themes/Fluent-Dark-compact/gtk-4.0 "\$HOME"/.config/gtk-4.0
-        else
-        echo Fluent-Dark-compact não selecionado
     fi
 fi
 if ! [ -d "\$HOME"/.local/share/gnome-shell/extensions ];then
