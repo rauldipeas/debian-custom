@@ -2,11 +2,13 @@ alsa-utils
 apt-transport-https
 baobab
 bash-completion
+btrfs-progs
 cheese
 clapper
 curl
 dropbear
 evince
+f2fs-tools
 fonts-cantarell
 fonts-noto-color-emoji
 fonts-powerline
@@ -45,3 +47,4 @@ tilix
 timeshift
 wget
 xz-utils
+xfsprogs
