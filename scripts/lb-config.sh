@@ -22,6 +22,7 @@ lb config\
 	--iso-application 'Debian Custom'\
 	--iso-publisher 'Debian Custom; https://rauldipeas.surge.sh/debian-custom; debian-custom.rauldipeas@lock.email'\
 	--iso-volume 'Debian Custom'\
+	--linux-packages "linux-headers-amd64$bpo linux-image-amd64$bpo"\
 	--mirror-bootstrap 'https://deb.debian.org/debian/'\
 	--mirror-chroot 'http://deb.debian.org/debian/'\
 	--mirror-binary 'http://deb.debian.org/debian/'\
