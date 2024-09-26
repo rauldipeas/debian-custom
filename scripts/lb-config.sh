@@ -17,6 +17,7 @@ lb config\
 	--distribution bookworm\
 	--distribution-binary bookworm\
 	--distribution-chroot bookworm\
+	--grub-splash '/usr/share/grub/themes/starfield/starfield.png'\
 	--image-name debian-custom\
 	--iso-application 'Debian Custom'\
 	--iso-publisher 'Debian Custom; https://rauldipeas.surge.sh/debian-custom; debian-custom.rauldipeas@lock.email'\
