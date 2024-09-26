@@ -12,6 +12,7 @@ if ! [ -d "\$HOME"/.bashrc.d ];then
     mv "\$HOME"/.bashrc "\$HOME"/.bashrc.d/rc.bash
     cp /opt/custom-user-settings/bash/bashrc "\$HOME"/.bashrc
     cp /opt/custom-user-settings/bash/*.bash "\$HOME"/.bashrc.d/
+    cp /opt/custom-user-settings/bash/*.sh "\$HOME"/.bashrc.d/
     cp /usr/share/liquidprompt/liquidpromptrc-dist "\$HOME"/.config/liquidpromptrc
     sed -i 's/debian.theme/powerline.theme/g' "\$HOME"/.config/liquidpromptrc
 fi
@@ -29,6 +30,14 @@ if ! [ -d "\$HOME"/.local/share/gnome-shell/extensions ];then
     mkdir -p "\$HOME"/.local/share
     cp -r /opt/custom-user-settings/gnome-shell "\$HOME"/.local/share/
 fi
+EOF
+cat <<EOF |sudo tee /etc/environment.d/90-qt-qpa-platformtheme.conf
+export QT_QPA_PLATFORMTHEME=gtk2
+EOF
+cat <<EOF |sudo tee /etc/profile.d/qt-qpa-platformtheme.sh
+export QT_QPA_PLATFORMTHEME=gtk2
+EOF
+cat <<EOF |sudo tee /etc/X11/Xsession.d/90-qt-qpa-platformtheme
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
 cat <<EOF |sudo tee /etc/rc.local>/dev/null
