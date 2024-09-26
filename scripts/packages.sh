@@ -3,10 +3,10 @@ set -e
 cp scripts/desktop-packages.list /tmp/debian-custom/config/package-lists/desktop.list.chroot
 #backports-kernel
 mkdir -p /tmp/debian-custom/config/archives
-cat <<EOF |tee config/archives/backports.list.chroot>/dev/null
+cat <<EOF |tee /tmp/debian-custom/config/archives/backports.list.chroot>/dev/null
 deb http://deb.debian.org/debian bookworm-backports main
 EOF
-cat <<EOF |tee config/package-lists/kernel.list>/dev/null
+cat <<EOF |tee /tmp/debian-custom/config/package-lists/kernel.list>/dev/null
 linux-headers-$(dpkg --print-architecture) -t bookworm-backports
 linux-image-$(dpkg --print-architecture) -t bookworm-backports
 EOF
