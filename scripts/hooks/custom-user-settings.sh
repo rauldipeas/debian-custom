@@ -27,6 +27,7 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
     mkdir -p "\$HOME"/.local/share
     cp -r /opt/custom-user-settings/gnome-shell "\$HOME"/.local/share/
     #pipewire/pulseaudio
+    mkdir -p "\$HOME"/.config/systemd
     ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.service
     ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.socket
     touch "\$HOME"/.custom-user-settings
@@ -56,6 +57,7 @@ sudo chown -R "\$(ls /home)"\
     /opt/topgrade\
     /opt/zap\
     /opt/zen-browser
+sudo -u root dconf load / < /opt/custom-user-settings/dconf-settings.ini
 sudo rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
