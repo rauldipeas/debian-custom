@@ -31,13 +31,13 @@ if ! [ -d "\$HOME"/.local/share/gnome-shell/extensions ];then
     cp -r /opt/custom-user-settings/gnome-shell "\$HOME"/.local/share/
 fi
 EOF
-cat <<EOF |sudo tee /etc/environment.d/90-qt-qpa-platformtheme.conf
+cat <<EOF |sudo tee /etc/environment.d/90-qt-qpa-platformtheme.conf>/dev/null
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
-cat <<EOF |sudo tee /etc/profile.d/qt-qpa-platformtheme.sh
+cat <<EOF |sudo tee /etc/profile.d/qt-qpa-platformtheme.sh>/dev/null
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
-cat <<EOF |sudo tee /etc/X11/Xsession.d/90-qt-qpa-platformtheme
+cat <<EOF |sudo tee /etc/X11/Xsession.d/90-qt-qpa-platformtheme>/dev/null
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
 cat <<EOF |sudo tee /etc/rc.local>/dev/null
@@ -54,8 +54,7 @@ sudo chown -R "\$(ls /home)"\
     /opt/rustdesk\
     /opt/topgrade\
     /opt/zap\
-    /opt/zen-browser\
-    /usr/local/share/applications/*-AM.desktop
+    /opt/zen-browser
 sudo rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
