@@ -7,7 +7,7 @@ sudo rm debian-1080p.zip boot/grub/themes/darkmatter-theme.py
 #sudo sed -i 's@/boot/grub/live-theme/theme.txt@/boot/grub/thmes/darkmatter/theme.txt@g' boot/grub/theme.cfg
 sudo sed -i 's/Live system/Debian custom/g' boot/grub/grub.cfg isolinux/live.cfg
 sudo sed -i 's/(amd64)//g' boot/grub/grub.cfg isolinux/live.cfg
-sudo sed -i 's/amd64 //g' boot/grub/grub.cfg isolinux/live.cfg
+sudo sed -i 's/(amd64 /(/g' boot/grub/grub.cfg isolinux/live.cfg
 cat <<EOF |sudo tee boot/grub/theme.cfg
 set color_normal=light-gray/black
 set color_highlight=white/dark-gray
