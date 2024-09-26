@@ -7,5 +7,5 @@ sudo apt autoremove --purge -y\
     network-manager-gnome\
     pipewire-pulse\
     rygel\
-    wireplumbler\
+    wireplumber\
     "*yelp*"
