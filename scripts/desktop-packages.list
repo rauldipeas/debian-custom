@@ -27,10 +27,10 @@ gnome-software-plugin-flatpak
 gnome-software-plugin-snap
 gnome-themes-extra
 gtk2-engines-murrine
-liquidprompt
+liblz4-tool
 lightdm
+liquidprompt
 lsb-release
-liblz4-1
 nala
 nautilus
 nohang
