@@ -57,7 +57,6 @@ sudo chown -R "\$(ls /home)"\
     /opt/topgrade\
     /opt/zap\
     /opt/zen-browser
-sudo -u root dconf load / < /opt/custom-user-settings/dconf-settings.ini
 sudo rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
