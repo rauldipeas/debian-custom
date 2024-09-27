@@ -7,7 +7,7 @@ lb config\
 	--architectures amd64\
 	--archive-areas 'main contrib non-free non-free-firmware'\
 	--backports true\
-	--bootappend-live 'boot=live components cpufreq.default_governor=performance loglevel=3 mitigations=off preempt=full quiet rd.udev.log_level=3 splash threadirqs zswap.enabled=1 zswap.compressor=lz4'\
+	--bootappend-live 'boot=live components cpufreq.default_governor=performance mitigations=off preempt=full quiet splash threadirqs zswap.enabled=1'\
 	--chroot-squashfs-compression-type xz\
 	--color\
 	--compression xz\
