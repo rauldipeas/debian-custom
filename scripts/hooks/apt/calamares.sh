@@ -2,6 +2,9 @@
 set -e
 sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends --force-yes -y calamares calamares-settings-debian
 sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
+sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
+sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
+sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
 cat <<EOF | sudo tee /usr/share/applications/install-debian.desktop>/dev/null
 [Desktop Entry]
 Type=Application
