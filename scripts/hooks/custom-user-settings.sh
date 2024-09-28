@@ -6,7 +6,7 @@ wget -qO /opt/custom-user-settings/bash/bashrc https://github.com/rauldipeas/deb
 wget -qO /opt/custom-user-settings/bash/bash-preexec.sh https://github.com/rcaloras/bash-preexec/raw/master/bash-preexec.sh
 wget -qO /opt/custom-user-settings/bash/atuin.bash https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/atuin.bash
 wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/liquidprompt.bash
-cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh>/dev/null
+cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh /etc/X11/Xsession.d/90-custom-user-settings>/dev/null
 if ! [ -f "\$HOME"/.custom-user-settings ];then
     #bash
     mkdir -p "\$HOME"/.bashrc.d
@@ -33,13 +33,7 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
     touch "\$HOME"/.custom-user-settings
 fi
 EOF
-cat <<EOF |sudo tee /etc/environment.d/90-qt-qpa-platformtheme.conf>/dev/null
-export QT_QPA_PLATFORMTHEME=gtk2
-EOF
-cat <<EOF |sudo tee /etc/profile.d/qt-qpa-platformtheme.sh>/dev/null
-export QT_QPA_PLATFORMTHEME=gtk2
-EOF
-cat <<EOF |sudo tee /etc/X11/Xsession.d/90-qt-qpa-platformtheme>/dev/null
+cat <<EOF |sudo tee /etc/environment.d/90-qt-qpa-platformtheme.conf /etc/profile.d/qt-qpa-platformtheme.sh /etc/X11/Xsession.d/90-qt-qpa-platformtheme>/dev/null
 export QT_QPA_PLATFORMTHEME=gtk2
 EOF
 cat <<EOF |sudo tee /etc/rc.local>/dev/null
