@@ -26,10 +26,6 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
     #gnome-shell-extensions
     mkdir -p "\$HOME"/.local/share
     cp -r /opt/custom-user-settings/gnome-shell "\$HOME"/.local/share/
-    #pipewire/pulseaudio
-    mkdir -p "\$HOME"/.config/systemd
-    ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.service
-    ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.socket
     touch "\$HOME"/.custom-user-settings
 fi
 EOF
