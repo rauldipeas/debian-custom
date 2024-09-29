@@ -39,7 +39,6 @@ EOF
 cat <<EOF |sudo tee /etc/rc.local>/dev/null
 #!/bin/bash
 set -e
-sudo mv /opt/custom-user-settings/gnome-wayland.desktop /usr/share/wayland-sessions/gnome-wayland.desktop
 sudo chown -R "\$(ls /home)"\
     /opt/am\
     /opt/bat\

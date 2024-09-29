@@ -10,7 +10,6 @@ sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
 #    - command: "sudo sed -i 's/gnome/gnome-xorg/g' /etc/lightdm/lightdm.conf"
 #      timeout: 180
 #EOF
-
 cat <<EOF | sudo tee /usr/share/applications/install-debian.desktop>/dev/null
 [Desktop Entry]
 Type=Application
