@@ -47,3 +47,4 @@ timeshift
 wget
 xz-utils
 xfsprogs
+xserver-xorg-input-synaptics
