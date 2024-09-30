@@ -7,3 +7,7 @@ sudo sed -i 's/#font-name=/font-name=Quicksand 11/g' /etc/lightdm/lightdm-gtk-gr
 sudo sed -i 's/#indicators=/indicators=~clock;~spacer;~session;~a11y;~power/g' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#greeter-hide-users/greeter-hide-users/g' /etc/lightdm/lightdm.conf
 sudo sed -i 's/#user-session=default/user-session=gnome-xorg/g' /etc/lightdm/lightdm.conf
+sudo sed -i 's/org.gnome.SettingsDaemon.ScreensaverProxy;//g' /usr/share/gnome-session/sessions/*.session
+cat <<EOF |sudo tee -a /etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop
+X-GNOME-Autostart-enabled=false
+EOF
