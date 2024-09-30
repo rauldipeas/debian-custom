@@ -6,6 +6,11 @@ mkdir -p /tmp/debian-custom/config/archives
 cat <<EOF |tee /tmp/debian-custom/config/archives/backports.list.chroot>/dev/null
 deb http://deb.debian.org/debian bookworm-backports main
 EOF
+cat <<EOF |tee /tmp/debian-custom/config/archives/backports.pref>/dev/null
+Package: *
+Pin: release n=bookworm-backports
+Pin-Priority: -1
+EOF
 cat <<EOF |tee /tmp/debian-custom/config/package-lists/kernel.list>/dev/null
 linux-headers-$(dpkg --print-architecture) -t bookworm-backports
 linux-image-$(dpkg --print-architecture) -t bookworm-backports
