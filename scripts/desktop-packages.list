@@ -23,8 +23,6 @@ gnome-session
 gnome-shell-extension-appindicator
 gnome-shell-extension-dash-to-panel
 gnome-shell-extension-tiling-assistant
-gnome-software-plugin-flatpak
-gnome-software-plugin-snap
 gnome-themes-extra
 gtk2-engines-murrine
 lightdm
@@ -42,6 +40,7 @@ pulseaudio-module-bluetooth
 pulseaudio-module-jack
 qt5-gtk2-platformtheme
 shotwell
+synaptic
 tilix
 timeshift
 wget
