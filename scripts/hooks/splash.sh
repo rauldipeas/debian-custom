@@ -12,6 +12,7 @@ sudo sed -i 's/(amd64 /(/g' boot/grub/grub.cfg isolinux/live.cfg
 cat <<EOF |sudo tee boot/grub/theme.cfg
 set color_normal=light-gray/black
 set color_highlight=white/dark-gray
+set gfxmode=auto
 loadfont hackb_18
 loadfont norwester_16
 loadfont norwester_20
