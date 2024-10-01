@@ -6,7 +6,6 @@ wget -qO /opt/custom-user-settings/bash/bash-preexec.sh https://github.com/rcalo
 wget -qO /opt/custom-user-settings/bash/atuin.bash https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/atuin.bash
 wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rauldipeas/debian-custom/raw/main/settings/bash/liquidprompt.bash
 wget -qO /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf-settings.ini
-wget -qO /opt/custom-user-settings/xscreensaver.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/xscreensaver.ini
 cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh /etc/X11/Xsession.d/90-custom-user-settings>/dev/null
 if ! [ -f "\$HOME"/.custom-user-settings ];then
     #bash
@@ -32,10 +31,6 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
     ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.service
     ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.socket
     touch "\$HOME"/.custom-user-settings
-    #xscreensaver
-    mkdir -p "\$HOME"/.config/autostart
-    cp /usr/share/xscreensaver/xscreensaver.desktop /etc/xdg/autostart/xscreensaver.desktop "\$HOME"/.config/autostart
-    cp /opt/custom-user-settings/xscreensaver.ini "\$HOME"/.xscreensaver
 fi
 EOF
 cat <<EOF |sudo tee /etc/environment.d/90-qt-qpa-platformtheme.conf /etc/profile.d/qt-qpa-platformtheme.sh /etc/X11/Xsession.d/90-qt-qpa-platformtheme>/dev/null
