@@ -33,6 +33,8 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
     ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.socket
     touch "\$HOME"/.custom-user-settings
     #xscreensaver
+    mkdir -p "\$HOME"/.config/autostart
+    cp /usr/share/xscreensaver/xscreensaver.desktop /etc/xdg/autostart/xscreensaver.desktop "\$HOME"/.config/autostart
     cp /opt/custom-user-settings/xscreensaver.ini "\$HOME"/.xscreensaver
 fi
 EOF
