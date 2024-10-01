@@ -7,6 +7,7 @@ cheese
 clapper
 curl
 dropbear
+eog
 evince
 f2fs-tools
 fonts-cantarell
@@ -40,9 +41,7 @@ pulseaudio
 pulseaudio-module-bluetooth
 pulseaudio-module-jack
 qt5-gtk2-platformtheme
-shotwell
 software-properties-gtk
-synaptic
 tilix
 timeshift
 wget

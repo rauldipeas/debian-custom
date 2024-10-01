@@ -46,6 +46,7 @@ sudo chown -R "\$(ls /home)"\
     /opt/am\
     /opt/bat\
     /opt/casterr\
+    /opt/everdo\
     /opt/fd\
     /opt/freetube\
     /opt/got\
