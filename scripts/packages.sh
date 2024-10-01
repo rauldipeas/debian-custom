@@ -6,7 +6,7 @@ mkdir -p /tmp/debian-custom/config/archives
 cat <<EOF |tee /tmp/debian-custom/config/archives/backports.list.chroot>/dev/null
 deb http://deb.debian.org/debian bookworm-backports main
 EOF
-cat <<EOF |tee /tmp/debian-custom/config/archives/backports.pref>/dev/null
+cat <<EOF |tee /tmp/debian-custom/config/archives/backports.pref.chroot>/dev/null
 Package: *
 Pin: release n=bookworm-backports
 Pin-Priority: -1

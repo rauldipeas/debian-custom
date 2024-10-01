@@ -10,3 +10,5 @@ echo 'deb [signed-by=/usr/share/keyrings/packages.mozilla.org.gpg] https://packa
 wget -cq --show-progress http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/"$(wget -qO- http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/|grep all.deb|tail -n1|cut -d '"' -f8)"
 sudo apt install ./kxstudio-repos*.deb
 rm ./kxstudio-repos*.deb
+# Raul Dipeas
+bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
