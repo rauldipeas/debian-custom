@@ -40,9 +40,12 @@ pulseaudio-module-bluetooth
 pulseaudio-module-jack
 qt5-gtk2-platformtheme
 shotwell
+software-properties-gtk
 synaptic
 tilix
 timeshift
 wget
-xz-utils
 xfsprogs
+xz-utils
+xscreensaver
+xscreensaver-gl-extra
