@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends --allow -y calamares calamares-settings-debian
+sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends -y calamares calamares-settings-debian
 sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
 sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
 sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
