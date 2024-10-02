@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+mkdir -p config/includes.chroot/etc/apt/preferences.d
 cat <<EOF |tee config/includes.chroot/etc/apt/sources.list>/dev/null
 deb http://deb.debian.org/debian bookworm contrib main non-free non-free-firmware
 deb http://deb.debian.org/debian bookworm-updates contrib main non-free non-free-firmware
