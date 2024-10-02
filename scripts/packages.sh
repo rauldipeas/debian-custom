@@ -1,5 +1,16 @@
 #!/bin/bash
 set -e
+cat <<EOF |tee config/includes.chroot/etc/apt/sources.list>/dev/null
+deb http://deb.debian.org/debian bookworm contrib main non-free non-free-firmware
+deb http://deb.debian.org/debian bookworm-updates contrib main non-free non-free-firmware
+deb http://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
+deb http://deb.debian.org/debian bookworm-backports contrib main non-free non-free-firmware
+EOF
+cat <<EOF |tee config/includes.chroot/etc/apt/preferences.d/backports.pref>/dev/null
+Package: *
+Pin: release n=bookworm-backports
+Pin-Priority: -1
+EOF
 cp scripts/desktop-packages.list /tmp/debian-custom/config/package-lists/desktop.list.chroot
 cd /tmp/debian-custom/config/packages.chroot
 #atuin
