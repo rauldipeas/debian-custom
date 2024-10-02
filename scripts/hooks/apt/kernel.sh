@@ -11,3 +11,5 @@ Pin-Priority: -1
 EOF
 sudo apt update
 sudo apt install -t bookworm-backports -y linux-image-amd64 linux-headers-amd64
+sudo rm /etc/apt/sources.list.d/backports.list
+sudo apt update

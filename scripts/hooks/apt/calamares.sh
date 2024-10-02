@@ -5,23 +5,22 @@ sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
 sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
 sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
+cat <<EOF |sudo tee /etc/calamares/locale.conf
+geoip:
+    style:    "json"
+    url:      "https://geoip.kde.org/v1/calamares"
+    selector: ""  # leave blank for the default
+EOF
+cat <<EOF |sudo tee /etc/calamares/partition.conf
+userSwapChoices:
+    - none      # Create no swap, use no swap
+    - file      # To swap file instead of partition
+initialSwapChoice: file
+availableFileSystemTypes:  ["xfs","btrfs","ext4","f2fs"]
+defaultFileSystemType: "xfs"
+EOF
 #cat <<EOF |sudo tee -a /etc/calamares/settings.conf
 #script:
 #    - command: "sudo sed -i 's/gnome/gnome-xorg/g' /etc/lightdm/lightdm.conf"
 #      timeout: 180
 #EOF
-cat <<EOF | sudo tee /usr/share/applications/install-debian.desktop>/dev/null
-[Desktop Entry]
-Type=Application
-Version=1.0
-Name=Install Debian Custom
-GenericName=Calamares Installer
-Exec=install-debian
-Comment=Calamares — Installer for Debian Custom Live
-Keywords=calamares;system;install;debian;installer
-Icon=calamares
-Terminal=false
-Categories=Qt;System;
-StartupWMClass=calamares
-StartupNotify=True
-EOF

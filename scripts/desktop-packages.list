@@ -34,6 +34,7 @@ lsb-release
 nala
 nautilus
 nohang
+ntp
 openssh-client
 pipx
 plymouth-themes

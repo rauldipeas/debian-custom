@@ -50,7 +50,6 @@ sudo chown -R "\$(ls /home)"\
     /opt/mission-center\
     /opt/rustdesk\
     /opt/topgrade\
-    /opt/zap\
     /opt/zen-browser
 sudo rm /etc/rc.local
 EOF
