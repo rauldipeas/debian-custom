@@ -42,6 +42,7 @@ pulseaudio-module-bluetooth
 pulseaudio-module-jack
 qt5-gtk2-platformtheme
 software-properties-gtk
+synaptic
 tilix
 timeshift
 wget
