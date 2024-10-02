@@ -7,5 +7,6 @@ sudo tee -a /etc/apt/sources.list.d/fasttrack.list
 sudo apt install -y fasttrack-archive-keyring
 sudo apt update
 sudo apt install --no-install-recommends -y virtualbox-guest-x11
-#sudo apt autoremove --purge -y fasttrack-archive-keyring
-#sudo rm /etc/apt/sources.list.d/fasttrack.list
+sudo apt autoremove --purge -y fasttrack-archive-keyring
+sudo rm /etc/apt/sources.list.d/fasttrack.list
+sudo apt update

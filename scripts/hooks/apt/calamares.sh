@@ -1,17 +1,17 @@
 #!/bin/bash
 set -e
-sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends --force-yes -y calamares calamares-settings-debian
+sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends --allow -y calamares calamares-settings-debian
 sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
 sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
 sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
-cat <<EOF |sudo tee /etc/calamares/locale.conf
+cat <<EOF |sudo tee /etc/calamares/modules/locale.conf>/dev/null
 geoip:
     style:    "json"
     url:      "https://geoip.kde.org/v1/calamares"
     selector: ""  # leave blank for the default
 EOF
-cat <<EOF |sudo tee /etc/calamares/partition.conf
+cat <<EOF |sudo tee /etc/calamares/modules/partition.conf>/dev/null
 userSwapChoices:
     - none      # Create no swap, use no swap
     - file      # To swap file instead of partition
