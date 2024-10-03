@@ -5,7 +5,7 @@ sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
 sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
 sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
-sudo sed -i 's/main non-free-firmware/contrib main non-free non-free-fimware/g' /usr/sbin/sources-final
+sudo sed -i 's/main non-free-firmware/contrib main non-free non-free-firmware/g' /usr/sbin/sources-final
 sudo sed -i 's/deb-src/#deb-src/g' /usr/sbin/sources-final
 cat <<EOF |sudo tee /etc/calamares/modules/locale.conf>/dev/null
 geoip:
