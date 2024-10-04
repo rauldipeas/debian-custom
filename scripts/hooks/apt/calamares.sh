@@ -18,7 +18,7 @@ userSwapChoices:
     - none      # Create no swap, use no swap
     - file      # To swap file instead of partition
 initialSwapChoice: file
-availableFileSystemTypes:  ["xfs","btrfs","ext4","f2fs"]
+availableFileSystemTypes:  ["xfs","ext4","f2fs"]
 defaultFileSystemType: "xfs"
 EOF
 cat <<EOF |sudo tee -a /etc/calamares/settings.conf
