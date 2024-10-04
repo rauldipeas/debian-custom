@@ -27,6 +27,8 @@ script:
       timeout: 180
 EOF
 cat <<EOF |sudo tee /usr/sbin/gpu-driver
+#!/bin/bash
+set -e
 if [ "\$(cut -d' ' -f9 <(grep NVIDIA <(sudo lshw -C display)))" == NVIDIA ];then
     sudo apt install -y firmware-misc-nonfree nvidia-driver
     echo 'NVIDIA'|sudo tee /etc/skel/.gpu-driver>/dev/null
