@@ -20,6 +20,7 @@ gir1.2-gmenu-3.0
 gir1.2-gsound-1.0
 gnome-calculator
 gnome-disk-utility
+gnome-network-displays
 gnome-session
 gnome-shell-extension-appindicator
 gnome-shell-extension-dash-to-panel
@@ -31,7 +32,6 @@ gtk2-engines-murrine
 lightdm
 liquidprompt
 lsb-release
-lshw
 nala
 nautilus
 nohang

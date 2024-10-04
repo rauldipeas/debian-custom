@@ -2,7 +2,7 @@
 set -e
 sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends -y calamares calamares-settings-debian
 sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
-sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
+#sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
 sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/main non-free-firmware/contrib main non-free non-free-firmware/g' /usr/sbin/sources-final
@@ -20,11 +20,6 @@ userSwapChoices:
 initialSwapChoice: file
 availableFileSystemTypes:  ["xfs","ext4","f2fs"]
 defaultFileSystemType: "xfs"
-EOF
-cat <<EOF |sudo tee -a /etc/calamares/settings.conf
-script:
-    - command: "/usr/sbin/gpu-driver"
-      timeout: 180
 EOF
 cat <<EOF |sudo tee /usr/sbin/gpu-driver
 #!/bin/bash
@@ -48,3 +43,22 @@ elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == Virtual
 fi
 EOF
 sudo chmod +x /usr/sbin/gpu-driver
+cat <<EOF |sudo tee -a /etc/calamares/modules/packages.conf
+backend: apt
+
+operations:
+  - remove:
+      - 'live-boot'
+      - 'live-boot-doc'
+      - 'live-config'
+      - 'live-config-doc'
+      - 'live-config-systemd'
+      - 'live-config-systemd'
+      - 'live-tools'
+      - 'live-task-localisation'
+      - 'live-task-recommended'
+      - 'calamares'
+  - install:
+      - package: lshw
+        post-script: /usr/sbin/gpu-driver
+EOF
