@@ -21,8 +21,28 @@ initialSwapChoice: file
 availableFileSystemTypes:  ["xfs","btrfs","ext4","f2fs"]
 defaultFileSystemType: "xfs"
 EOF
-#cat <<EOF |sudo tee -a /etc/calamares/settings.conf
-#script:
-#    - command: "sudo sed -i 's/gnome/gnome-xorg/g' /etc/lightdm/lightdm.conf"
-#      timeout: 180
-#EOF
+cat <<EOF |sudo tee -a /etc/calamares/settings.conf
+script:
+    - command: "/usr/sbin/gpu-driver"
+      timeout: 180
+EOF
+cat <<EOF |sudo tee /usr/sbin/gpu-driver
+if [ "\$(cut -d' ' -f9 <(grep NVIDIA <(sudo lshw -C display)))" == NVIDIA ];then
+    sudo apt install -y firmware-misc-nonfree nvidia-driver
+    echo 'NVIDIA'|sudo tee /etc/skel/.gpu-driver>/dev/null
+elif [ "\$(cut -d' ' -f9 <(grep AMD <(sudo lshw -C display)))" == AMD ];then
+    echo 'AMD'|sudo tee /etc/skel/.gpu-driver>/dev/null
+elif [ "\$(cut -d' ' -f9 <(grep Intel <(sudo lshw -C display)))" == Intel ];then
+    echo 'Intel'|sudo tee /etc/skel/.gpu-driver>/dev/null
+elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == VirtualBox ];then
+    echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-fasttrack main contrib"|
+    sudo tee /etc/apt/sources.list.d/fasttrack.list
+    echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-backports-staging main contrib"|
+    sudo tee -a /etc/apt/sources.list.d/fasttrack.list
+    sudo apt install -y fasttrack-archive-keyring
+    sudo apt update
+    sudo apt install --no-install-recommends -y virtualbox-guest-x11
+    echo 'VirtualBox'|sudo tee /etc/skel/.gpu-driver>/dev/null
+fi
+EOF
+sudo chmod +x /usr/sbin/gpu-driver
