@@ -3,7 +3,7 @@ set -e
 sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends -y calamares calamares-settings-debian
 sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
 sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
-sudo sed -i "s/  - packages/  - packages\n  - shellprocess/g" /etc/calamares/settings.conf 
+sudo sed -i "s/  - sources-final/  - sources-final\n  - shellprocess/g" /etc/calamares/settings.conf 
 sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/main non-free-firmware/contrib main non-free non-free-firmware/g' /usr/sbin/sources-final
@@ -27,18 +27,18 @@ cat <<EOF |sudo tee /usr/sbin/gpu-driver>/dev/null
 set -e
 if [ "\$(cut -d' ' -f9 <(grep NVIDIA <(sudo lshw -C display)))" == NVIDIA ];then
     sudo apt install -y firmware-misc-nonfree nvidia-driver
-    echo 'NVIDIA'|sudo tee /etc/skel/.gpu-driver>/dev/null
+    echo 'NVIDIA'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
 elif [ "\$(cut -d' ' -f9 <(grep AMD <(sudo lshw -C display)))" == AMD ];then
-    echo 'AMD'|sudo tee /etc/skel/.gpu-driver>/dev/null
+    echo 'AMD'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
 elif [ "\$(cut -d' ' -f9 <(grep Intel <(sudo lshw -C display)))" == Intel ];then
-    echo 'Intel'|sudo tee /etc/skel/.gpu-driver>/dev/null
+    echo 'Intel'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
 elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == VirtualBox ];then
     echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-fasttrack main contrib"|sudo tee /etc/apt/sources.list.d/fasttrack.list>/dev/null
     echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-backports-staging main contrib"|sudo tee -a /etc/apt/sources.list.d/fasttrack.list>/dev/null
     sudo apt install -y fasttrack-archive-keyring
     sudo apt update
     sudo apt install --no-install-recommends -y virtualbox-guest-x11
-    echo 'VirtualBox'|sudo tee /etc/skel/.gpu-driver>/dev/null
+    echo 'VirtualBox'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
 fi
 EOF
 sudo chmod +x /usr/sbin/gpu-driver
