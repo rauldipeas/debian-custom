@@ -33,10 +33,8 @@ elif [ "\$(cut -d' ' -f9 <(grep AMD <(sudo lshw -C display)))" == AMD ];then
 elif [ "\$(cut -d' ' -f9 <(grep Intel <(sudo lshw -C display)))" == Intel ];then
     echo 'Intel'|sudo tee /etc/skel/.gpu-driver>/dev/null
 elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == VirtualBox ];then
-    echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-fasttrack main contrib"|
-    sudo tee /etc/apt/sources.list.d/fasttrack.list
-    echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-backports-staging main contrib"|
-    sudo tee -a /etc/apt/sources.list.d/fasttrack.list
+    echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-fasttrack main contrib"|sudo tee /etc/apt/sources.list.d/fasttrack.list>/dev/null
+    echo "deb http://fasttrack.debian.net/debian-fasttrack/ \$(lsb_release -cs)-backports-staging main contrib"|sudo tee -a /etc/apt/sources.list.d/fasttrack.list>/dev/null
     sudo apt install -y fasttrack-archive-keyring
     sudo apt update
     sudo apt install --no-install-recommends -y virtualbox-guest-x11
