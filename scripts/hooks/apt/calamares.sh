@@ -21,7 +21,7 @@ initialSwapChoice: file
 availableFileSystemTypes:  ["xfs","ext4","f2fs"]
 defaultFileSystemType: "xfs"
 EOF
-cat <<EOF |sudo tee /usr/sbin/gpu-driver
+cat <<EOF |sudo tee /usr/sbin/gpu-driver>/dev/null
 #!/bin/bash
 set -e
 if [ "\$(cut -d' ' -f9 <(grep NVIDIA <(sudo lshw -C display)))" == NVIDIA ];then
@@ -43,7 +43,7 @@ elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == Virtual
 fi
 EOF
 sudo chmod +x /usr/sbin/gpu-driver
-cat <<EOF |sudo tee /etc/calamares/modules/packages.conf
+cat <<EOF |sudo tee /etc/calamares/modules/packages.conf>/dev/null
 backend: apt
 
 operations:
