@@ -12,3 +12,17 @@ sudo sed -i 's/#user-session=default/user-session=gnome/g' /etc/lightdm/lightdm.
 #sudo rm /etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop /usr/libexec/gsd-screensaver-proxy
 #sudo ln -s /dev/null /etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop
 #sudo ln -s /dev/null /usr/libexec/gsd-screensaver-proxy
+cat <<EOF |sudo tee /etc/X11/xorg.conf.d/00-touchpad.conf
+Section "InputClass"
+    	Identifier "Touchpad"
+    	MatchIsTouchpad "on"
+    	Driver "libinput"
+    	Option "Tapping" "on"
+    	Option "NaturalScrolling" "on"
+    	Option "HorizTwoFingerScroll" "on"
+    	Option "VertTwoFingerScroll" "on"
+	Option "PalmDetect" "1"
+	Option "PalmMinWidth" "8"
+	Option "PalmMinZ" "100"
+EndSection
+EOF

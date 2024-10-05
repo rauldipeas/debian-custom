@@ -26,7 +26,7 @@ cat <<EOF |sudo tee /usr/sbin/gpu-driver>/dev/null
 #!/bin/bash
 set -e
 if [ "\$(cut -d' ' -f9 <(grep NVIDIA <(sudo lshw -C display)))" == NVIDIA ];then
-    sudo apt install -y firmware-misc-nonfree nvidia-driver
+    sudo apt install -y -t bookworm-backports firmware-misc-nonfree nvidia-driver
     echo 'NVIDIA'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
 elif [ "\$(cut -d' ' -f9 <(grep AMD <(sudo lshw -C display)))" == AMD ];then
     echo 'AMD'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
@@ -48,4 +48,11 @@ timeout: 10
 script:
     - command: "/usr/sbin/gpu-driver"
       timeout: 180
+EOF
+cat <<EOF |sudo tee /etc/live/config.conf.d/debian-custom.conf
+LIVE_HOSTNAME=debian-custom
+LIVE_USERNAME=tux
+LIVE_USER_FULLNAME="Tux"
+LIVE_LOCALES=pt_BR.UTF-8
+LIVE_KEYBOARD_LAYOUTS=br
 EOF
