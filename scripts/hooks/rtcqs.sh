@@ -6,7 +6,7 @@ vm.swappiness = 10
 EOF
 # zswap
 cat <<EOF |sudo tee /etc/default/grub.d/rtcqs.cfg>/dev/null
-GRUB_CMDLINE_LINUX_DEFAULT="cpufreq.default_governor=performance mitigations=off preempt=full quiet splash threadirqs zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=20 zswap.zpool=z3fold"
+GRUB_CMDLINE_LINUX_DEFAULT="cpufreq.default_governor=performance mitigations=off preempt=full quiet splash threadirqs vt.global_cursor_default=0 zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=20 zswap.zpool=z3fold"
 EOF
 cat <<EOF |sudo tee -a /etc/initramfs-tools/modules>/dev/null
 lz4
