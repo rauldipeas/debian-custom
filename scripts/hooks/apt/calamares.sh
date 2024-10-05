@@ -43,7 +43,7 @@ elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == Virtual
 fi
 EOF
 sudo chmod +x /usr/sbin/gpu-driver
-cat <<EOF |sudo tee -a /etc/calamares/modules/packages.conf
+cat <<EOF |sudo tee /etc/calamares/modules/packages.conf
 backend: apt
 
 operations:
@@ -60,5 +60,6 @@ operations:
       - 'calamares'
   - install:
       - package: lshw
+        pre-script: sudo touch /etc/skel/.gpu-driver
         post-script: /usr/sbin/gpu-driver
 EOF
