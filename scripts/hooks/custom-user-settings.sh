@@ -39,7 +39,7 @@ EOF
 cat <<EOF |sudo tee /etc/rc.local>/dev/null
 #!/bin/bash
 set -e
-sudo chown -R "\$(ls /home)"\
+chown -R "\$(ls /home)"\
     /opt/am\
     /opt/bat\
     /opt/casterr\
@@ -51,7 +51,8 @@ sudo chown -R "\$(ls /home)"\
     /opt/rustdesk\
     /opt/topgrade\
     /opt/zen-browser
-sudo rm /etc/rc.local
+dconf load / < /opt/custom-user-settings/dconf-settings.ini
+rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
 cat <<EOF |sudo tee /usr/local/bin/reset-user-settings>/dev/null

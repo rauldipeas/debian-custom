@@ -4,10 +4,12 @@ sudo apt install -o Dpkg::Options::="--force-confold" --no-install-recommends -y
 sudo sed -i 's/pkexec/sudo -E/g' /usr/bin/install-debian
 sudo sed -i 's/calamares-settings-debian/calamares/g' /etc/calamares/modules/packages.conf
 sudo sed -i "s/  - sources-final/  - sources-final\n  - shellprocess/g" /etc/calamares/settings.conf 
+sudo sed -i "s/        - root/        - root\n        - internet/g" /etc/calamares/settings.conf 
 sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/main non-free-firmware/contrib main non-free non-free-firmware/g' /usr/sbin/sources-final
 sudo sed -i 's/deb-src/#deb-src/g' /usr/sbin/sources-final
+sudo cp /usr/share/icons/Papirus/64x64/apps/org.linux_hardware.hw-probe.svg /etc/skel/.face
 cat <<EOF |sudo tee /etc/calamares/modules/locale.conf>/dev/null
 geoip:
     style:    "json"
@@ -41,16 +43,21 @@ elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == Virtual
     echo 'VirtualBox'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
 fi
 EOF
+cat <<EOF |sudo tee /usr/sbin/power-manager
+if find /sys/class/power_supply|grep BAT;then
+	sudo apt install -y tlp
+fi
+EOF
 sudo chmod +x /usr/sbin/gpu-driver
 cat <<EOF |sudo tee /etc/calamares/modules/shellprocess.conf>/dev/null
 dontChroot: false
 timeout: 10
 script:
-    - command: "/usr/sbin/gpu-driver"
-      timeout: 180
+    - "/usr/sbin/gpu-driver"
+    - "/usr/sbin/power-manager"
 EOF
 cat <<EOF |sudo tee /etc/live/config.conf.d/debian-custom.conf
-LIVE_HOSTNAME=debian-custom
+#LIVE_HOSTNAME=debian-custom
 LIVE_USERNAME=tux
 LIVE_USER_FULLNAME="Tux"
 #LIVE_LOCALES=pt_BR.UTF-8
