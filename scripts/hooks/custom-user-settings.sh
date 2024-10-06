@@ -8,6 +8,7 @@ wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rau
 wget -qO /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf-settings.ini
 cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh /etc/X11/Xsession.d/90-custom-user-settings>/dev/null
 if ! [ -f "\$HOME"/.custom-user-settings ];then
+    mkdir -p "\$HOME"/.config
     #bash
     mkdir -p "\$HOME"/.bashrc.d
     mv "\$HOME"/.bashrc "\$HOME"/.bashrc.d/rc.bash
@@ -19,7 +20,6 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
     #dconf
     dconf load / < /opt/custom-user-settings/dconf-settings.ini
     #gtk-4.0
-    mkdir -p "\$HOME"/.config
     if [ \$(gsettings get org.gnome.desktop.interface gtk-theme|cut -d \' -f2) = Fluent-Dark-compact ];then
         ln -fs /usr/share/themes/Fluent-Dark-compact/gtk-4.0 "\$HOME"/.config/gtk-4.0
     fi
@@ -51,7 +51,6 @@ chown -R "\$(ls /home)"\
     /opt/rustdesk\
     /opt/topgrade\
     /opt/zen-browser
-dconf load / < /opt/custom-user-settings/dconf-settings.ini
 rm /etc/rc.local
 EOF
 sudo chmod +x /etc/rc.local
