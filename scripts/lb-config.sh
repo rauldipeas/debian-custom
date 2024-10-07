@@ -13,9 +13,9 @@ lb config \
     --debian-installer none \
     --distribution bookworm \
     --image-name "debian-custom" \
-    --iso-application "Debian Custom" \
-    --iso-publisher "Debian Custom; https://rauldipeas.surge.sh/debian-custom; debian-custom.rauldipeas@lock.email" \
-    --iso-volume "Debian Custom" \
+    --iso-application "Debian" \
+    --iso-publisher "Debian; https://rauldipeas.surge.sh/debian-custom; debian-custom.rauldipeas@lock.email" \
+    --iso-volume "Debian" \
     --mirror-bootstrap "https://deb.debian.org/debian/" \
     --mirror-binary "https://deb.debian.org/debian/" \
     --mirror-chroot "https://deb.debian.org/debian/" \

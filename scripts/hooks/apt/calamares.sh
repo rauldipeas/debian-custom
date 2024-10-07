@@ -54,12 +54,13 @@ dontChroot: false
 script:
     - "/usr/sbin/gpu-driver"
     - "/usr/sbin/power-manager"
+    - "rm -r /etc/calamares"
 EOF
 sudo chmod +x /usr/sbin/power-manager
-#cat <<EOF |sudo tee /etc/live/config.conf.d/debian-custom.conf
+cat <<EOF |sudo tee /etc/live/config.conf.d/debian-custom.conf
 #LIVE_HOSTNAME=debian-custom
-#LIVE_USERNAME=tux
-#LIVE_USER_FULLNAME="Tux"
+LIVE_USERNAME=tux
+LIVE_USER_FULLNAME="Tux"
 #LIVE_LOCALES=pt_BR.UTF-8
 #LIVE_KEYBOARD_LAYOUTS=br
-#EOF
+EOF

@@ -1,4 +1,4 @@
-name: Debian Custom
+name: Debian
 on:
   push:
     branches:
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Debian Custom build
+      - name: Debian build
         run: bash scripts/build.sh
       - name: ISO upload
         uses: actions/upload-artifact@v4
