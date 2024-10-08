@@ -6,7 +6,7 @@ sudo unzip debian-1080p.zip -d boot/grub/themes
 sudo rm debian-1080p.zip boot/grub/themes/darkmatter-theme.py
 sudo mkdir -p boot/grub/fonts
 sudo cp boot/grub/themes/darkmatter/*.pf2 boot/grub/fonts/
-sudo sed -i 's/Live system/Debian/g' boot/grub/grub.cfg isolinux/live.cfg
+sudo sed -i 's@Live system@Debian GNU/Linux live@g' boot/grub/grub.cfg isolinux/live.cfg
 sudo sed -i 's/(amd64)//g' boot/grub/grub.cfg isolinux/live.cfg
 sudo sed -i 's/(amd64 /(/g' boot/grub/grub.cfg isolinux/live.cfg
 cat <<EOF |sudo tee boot/grub/theme.cfg
