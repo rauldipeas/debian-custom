@@ -12,7 +12,7 @@ sudo sed -i 's/#user-session=default/user-session=gnome/g' /etc/lightdm/lightdm.
 #sudo rm /etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop /usr/libexec/gsd-screensaver-proxy
 #sudo ln -s /dev/null /etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop
 #sudo ln -s /dev/null /usr/libexec/gsd-screensaver-proxy
-cat <<EOF |sudo tee /etc/X11/xorg.conf.d/00-touchpad.conf
+cat <<EOF |sudo tee /etc/X11/xorg.conf.d/00-touchpad.conf>/dev/null
 Section "InputClass"
     	Identifier "Touchpad"
     	MatchIsTouchpad "on"

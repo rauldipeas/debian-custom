@@ -43,7 +43,7 @@ elif [ "\$(cut -d' ' -f9 <(grep VirtualBox <(sudo lshw -C display)))" == Virtual
     echo 'VirtualBox'|sudo tee /home/"\$(ls /home)"/.gpu-driver>/dev/null
 fi
 EOF
-cat <<EOF |sudo tee /usr/sbin/power-manager
+cat <<EOF |sudo tee /usr/sbin/power-manager>/dev/null
 if find /sys/class/power_supply|grep BAT;then
 	sudo apt install -y tlp
 fi
@@ -57,10 +57,10 @@ script:
     - "rm -r /etc/calamares"
 EOF
 sudo chmod +x /usr/sbin/power-manager
-cat <<EOF |sudo tee /etc/live/config.conf.d/debian-custom.conf
+#cat <<EOF |sudo tee /etc/live/config.conf.d/debian-custom.conf>/dev/null
 #LIVE_HOSTNAME=debian-custom
-LIVE_USERNAME=tux
-LIVE_USER_FULLNAME="Tux"
+#LIVE_USERNAME=tux
+#LIVE_USER_FULLNAME="Tux"
 #LIVE_LOCALES=pt_BR.UTF-8
 #LIVE_KEYBOARD_LAYOUTS=br
 EOF
