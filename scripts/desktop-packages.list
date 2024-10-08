@@ -49,6 +49,7 @@ software-properties-gtk
 synaptic
 tilix
 timeshift
+weston
 wget
 xfsprogs
 xz-utils
