@@ -9,7 +9,11 @@ sudo sed -i 's/1/2/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/true/false/g' /etc/calamares/modules/welcome.conf
 sudo sed -i 's/main non-free-firmware/contrib main non-free non-free-firmware/g' /usr/sbin/sources-final
 sudo sed -i 's/deb-src/#deb-src/g' /usr/sbin/sources-final
+sudo sed -i 's/welcomeStyleCalamares: true/welcomeStyleCalamares: false/g' /etc/calamares/branding/debian/branding.desc
+sudo sed -i 's/windowExpanding: normal/windowExpanding: noexpand/g' /etc/calamares/branding/debian/branding.desc
+sudo sed -i 's/windowSize: 800px,520px/windowSize: 800px,750px/g' /etc/calamares/branding/debian/branding.desc
 sudo cp /usr/share/icons/Papirus/64x64/apps/org.linux_hardware.hw-probe.svg /etc/skel/.face
+sudo wget -q --show-progress -O /etc/calamares/branding/debian/welcome.png https://github.com/rauldipeas/debian-custom/raw/main/assets/calamares-welcome.png
 cat <<EOF |sudo tee /etc/calamares/modules/locale.conf>/dev/null
 geoip:
     style:    "json"
