@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-mkdir -p config/includes.chroot/usr/share/{backgrounds,gnome-background-properties}
-cp -r assets/unsplash config/includes.chroot/usr/share/backgrounds/unsplash
-cat <<EOF |tee config/includes.chroot/usr/share/gnome-background-properties/unsplash.xml>/dev/null
+mkdir -p /tmp/debian-custom/config/includes.chroot/usr/share/{backgrounds,gnome-background-properties}
+cp -r assets/unsplash /tmp/debian-custom/config/includes.chroot/usr/share/backgrounds/unsplash
+cat <<EOF |tee /tmp/debian-custom/config/includes.chroot/usr/share/gnome-background-properties/unsplash.xml>/dev/null
 <?xml version="1.0"?>
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
 <wallpapers>

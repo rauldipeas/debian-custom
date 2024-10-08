@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-mkdir -p config/includes.chroot/etc/apt/preferences.d
-cat <<EOF |tee config/includes.chroot/etc/apt/preferences.d/backports.pref>/dev/null
+mkdir -p /tmp/debian-custom/config/includes.chroot/etc/apt/preferences.d
+cat <<EOF |tee /tmp/debian-custom/config/includes.chroot/etc/apt/preferences.d/backports.pref>/dev/null
 Package: *
 Pin: release n=bookworm-backports
 Pin-Priority: -1
