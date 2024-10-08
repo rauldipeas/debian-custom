@@ -16,8 +16,8 @@ cat <<EOF |tee /tmp/debian-custom/config/includes.chroot/usr/share/gnome-backgro
 		<filename>/usr/share/backgrounds/unsplash/benjamin-davies-P9BY2joAcwk-unsplash.jpg</filename>
 		<options>zoom</options>
 	</wallpaper>
+	<wallpaper deleted="false">
 		<name>Unsplash 3</name>
-		<wallpaper deleted="false">
 		<filename>/usr/share/backgrounds/unsplash/benjamin-voros-yrwpJwDNSHE-unsplash.jpg</filename>
 		<options>zoom</options>
 	</wallpaper>
