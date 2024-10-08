@@ -63,4 +63,4 @@ sudo chmod +x /usr/sbin/power-manager
 #LIVE_USER_FULLNAME="Tux"
 #LIVE_LOCALES=pt_BR.UTF-8
 #LIVE_KEYBOARD_LAYOUTS=br
-EOF
+#EOF
