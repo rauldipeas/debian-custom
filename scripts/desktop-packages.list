@@ -51,5 +51,7 @@ tilix
 timeshift
 weston
 wget
+wmctrl
+xdotool
 xfsprogs
 xz-utils

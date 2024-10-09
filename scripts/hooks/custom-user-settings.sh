@@ -48,6 +48,8 @@ chown -R "\$(ls /home)"\
     /opt/freetube\
     /opt/got\
     /opt/mission-center\
+    /opt/muffon\
+    /opt/nyrna\
     /opt/rustdesk\
     /opt/topgrade\
     /opt/zen-browser
