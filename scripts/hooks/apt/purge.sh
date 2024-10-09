@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 sudo apt autoremove --purge -y\
-    "*apache*\
+    "*apache*"\
     "gdm3*"\
     gnome-remote-desktop\
     "*im-config*"\
