@@ -46,6 +46,7 @@ pulseaudio
 pulseaudio-module-bluetooth
 pulseaudio-module-jack
 qt5-gtk2-platformtheme
+sd
 software-properties-gtk
 synaptic
 tilix
