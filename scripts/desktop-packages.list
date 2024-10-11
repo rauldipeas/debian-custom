@@ -51,6 +51,7 @@ software-properties-gtk
 synaptic
 tilix
 timeshift
+torsocks
 weston
 wget
 wmctrl
