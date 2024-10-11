@@ -11,7 +11,7 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
     mkdir -p "\$HOME"/.config
     #bash
     mkdir -p "\$HOME"/.bashrc.d
-    mv "\$HOME"/.bashrc "\$HOME"/.bashrc.d/rc.bash
+    cp /etc/skel/.bashrc "\$HOME"/.bashrc.d/rc.bash
     cp /opt/custom-user-settings/bash/bashrc "\$HOME"/.bashrc
     cp /opt/custom-user-settings/bash/*.bash "\$HOME"/.bashrc.d/
     cp /opt/custom-user-settings/bash/*.sh "\$HOME"/.bashrc.d/
