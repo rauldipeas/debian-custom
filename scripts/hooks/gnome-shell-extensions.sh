@@ -5,6 +5,8 @@ pipx install gnome-extensions-cli --system-site-packages
 "$HOME"/.local/bin/gext install arcmenu@arcmenu.com
 #blur my shell
 "$HOME"/.local/bin/gext install blur-my-shell@aunetx
+#cpufreq
+#"$HOME"/.local/bin/gext install cpufreq@konkor
 #emoji copy
 "$HOME"/.local/bin/gext install emoji-copy@felipeftn
 #forge

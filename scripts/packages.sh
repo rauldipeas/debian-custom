@@ -11,6 +11,8 @@ cd /tmp/debian-custom/config/packages.chroot
 #atuin
 wget -q --show-progress "$(wget -qO- https://api.github.com/repos/ellie/atuin/releases|grep browser_download_url|grep .deb|head -n1|cut -d '"' -f4)"
 dpkg-name atuin*.deb
+wget -q --show-progress "$(wget -qO- https://api.github.com/repos/konkor/cpufreq/releases|grep browser_download_url|grep .deb|head -n1|cut -d '"' -f4)"
+dpkg-name cpufreq*.deb
 wget -q --show-progress "$(wget -qO- https://api.github.com/repos/zyedidia/micro/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d '"' -f4)"
 dpkg-name micro*.deb
 wget -q --show-progress "$(wget -qO- https://www.veracrypt.fr/en/Downloads.html|grep amd64.deb|head -n1|cut -d '"' -f2|sed 's/&#43;/+/g')"
