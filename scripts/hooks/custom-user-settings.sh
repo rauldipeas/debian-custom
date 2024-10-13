@@ -51,6 +51,8 @@ chown -R "\$(ls /home)"\
     /opt/muffon\
     /opt/nyrna\
     /opt/rustdesk\
+    /opt/squirrel-disk\
+    /opt/stretchly\
     /opt/topgrade\
     /opt/zen-browser
 rm /etc/rc.local

@@ -1,6 +1,6 @@
 alsa-utils
 apt-transport-https
-baobab
+#baobab
 bash-completion
 breeze-cursor-theme
 btrfs-progs
