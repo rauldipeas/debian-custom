@@ -1,6 +1,5 @@
 alsa-utils
 apt-transport-https
-#baobab
 bash-completion
 breeze-cursor-theme
 btrfs-progs
@@ -52,7 +51,6 @@ synaptic
 tilix
 timeshift
 torsocks
-weston
 wget
 wmctrl
 xdotool

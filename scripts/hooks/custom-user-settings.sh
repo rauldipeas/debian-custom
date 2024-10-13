@@ -8,7 +8,8 @@ wget -qO /opt/custom-user-settings/bash/liquidprompt.bash https://github.com/rau
 wget -qO /opt/custom-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-custom/raw/main/settings/dconf-settings.ini
 cat <<EOF |sudo tee /etc/profile.d/custom-user-settings.sh /etc/X11/Xsession.d/90-custom-user-settings>/dev/null
 if ! [ -f "\$HOME"/.custom-user-settings ];then
-    mkdir -p "\$HOME"/.config
+    mkdir -p "\$HOME"/.config/systemd
+    mkdir -p "\$HOME"/.local/share/applications
     #bash
     mkdir -p "\$HOME"/.bashrc.d
     cp /etc/skel/.bashrc "\$HOME"/.bashrc.d/rc.bash
@@ -24,12 +25,12 @@ if ! [ -f "\$HOME"/.custom-user-settings ];then
         ln -fs /usr/share/themes/Fluent-Dark-compact/gtk-4.0 "\$HOME"/.config/gtk-4.0
     fi
     #gnome-shell-extensions
-    mkdir -p "\$HOME"/.local/share
     cp -r /opt/custom-user-settings/gnome-shell "\$HOME"/.local/share/
     #pipewire/pulseaudio
-    mkdir -p "\$HOME"/.config/systemd
     ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.service
     ln -fs /dev/null "\$HOME"/.config/systemd/pipewire.socket
+    #walc
+    ln -fs /dev/null "\$HOME"/.local/share/applications/WALC.desktop
     touch "\$HOME"/.custom-user-settings
 fi
 EOF
@@ -54,6 +55,7 @@ chown -R "\$(ls /home)"\
     /opt/squirrel-disk\
     /opt/stretchly\
     /opt/topgrade\
+    /opt/walc\
     /opt/zen-browser
 rm /etc/rc.local
 EOF
