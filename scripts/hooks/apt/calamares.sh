@@ -56,8 +56,10 @@ sudo chmod +x /usr/sbin/gpu-driver
 cat <<EOF |sudo tee /etc/calamares/modules/shellprocess.conf>/dev/null
 dontChroot: false
 script:
-    - "/usr/sbin/gpu-driver"
-    - "/usr/sbin/power-manager"
+    - command: "/usr/sbin/gpu-driver"
+      timeout: 180
+    - command: "/usr/sbin/power-manager"
+      timeout: 180
     - "rm -r /etc/calamares"
 EOF
 sudo chmod +x /usr/sbin/power-manager
