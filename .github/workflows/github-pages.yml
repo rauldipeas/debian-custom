@@ -13,9 +13,9 @@ on:
         - '*.png'
         - '*.svg'
         - '_config.yml'
-        - 'assets'
-        - 'scripts'
-        - 'settings'
+        - './assets'
+        - './scripts'
+        - './settings'
     schedule:
       - cron:  '0 */12 * * *'
     workflow_dispatch:
