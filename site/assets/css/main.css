@@ -2590,11 +2590,18 @@ input, select, textarea {
 			padding: 1.8em;
 			text-align: center;
 			height: 1em;
+			transition: transform .1s;
+		}
+		
+		ul.major-icons li:hover {
+			padding: 1.8em;
+			transform: scale(1.2) rotate(4deg);
 		}
 		
 			ul.major-icons li .caption {
 				display: block;
 			}
+
 
 			ul.major-icons li a {
 				display: block;
@@ -3392,6 +3399,12 @@ input, select, textarea {
 
 			ul.major-icons li {
 				padding: 1.5em;
+				transition: transform .1s;
+			}
+
+			ul.major-icons li:hover {
+				padding: 1.5em;
+				transform: scale(1.2) rotate(4deg);
 			}
 
 				ul.major-icons li .icon {
