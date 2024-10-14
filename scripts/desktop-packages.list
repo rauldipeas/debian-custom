@@ -30,7 +30,7 @@ gnome-software-plugin-snap
 gnome-themes-extra
 gtk2-engines-murrine
 libkeybinder-3.0-0
-lightdm
+#lightdm
 liquidprompt
 lsb-release
 lshw
