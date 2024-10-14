@@ -13,7 +13,9 @@ on:
       - '*.png'
       - '*.svg'
       - '_config.yml'
-      - 'site'
+      - 'assets'
+      - 'scripts'
+      - 'settings'
   schedule:
     - cron:  '0 */12 * * *'
   workflow_dispatch:
@@ -22,17 +24,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Debian build
-        run: bash scripts/build.sh
-      - name: ISO upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: debian-custom
-          path: /tmp/debian-custom/debian-custom*.iso
-      - name: Log cleanup
-        run: bash -x scripts/actions-cleanup.sh
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
