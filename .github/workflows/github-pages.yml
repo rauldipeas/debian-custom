@@ -32,3 +32,8 @@ jobs:
           build_dir: site
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Delete branch
+        uses: dawidd6/action-delete-branch@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          branches: pages
