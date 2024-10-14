@@ -23,4 +23,4 @@ Section "InputClass"
 EndSection
 EOF
 #sudo sed -i 's@/usr/sbin/gdm3@/usr/sbin/lightdm@g' /etc/X11/default-display-manager
-sudo ln -fs /usr/lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service
+#sudo ln -fs /usr/lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service
