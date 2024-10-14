@@ -1,33 +1,48 @@
-name: Debian
+name: Deploy static content to Pages
 on:
-  push:
-    branches:
-      - 'main'
-    paths-ignore:
-      - '.editorconfig'
-      - '.gitignore'
-      - 'leiame.md'
-      - 'readme.md'
-      - 'to-do.log'
-      - '*.jpg'
-      - '*.png'
-      - '*.svg'
-      - '_config.yml'
-      - 'assets'
-      - 'scripts'
-      - 'settings'
-  schedule:
-    - cron:  '0 */12 * * *'
-  workflow_dispatch:
+    push:
+      branches:
+        - 'main'
+      paths-ignore:
+        - '.editorconfig'
+        - '.gitignore'
+        - 'leiame.md'
+        - 'readme.md'
+        - 'to-do.log'
+        - '*.jpg'
+        - '*.png'
+        - '*.svg'
+        - '_config.yml'
+        - 'assets'
+        - 'scripts'
+        - 'settings'
+    schedule:
+      - cron:  '0 */12 * * *'
+    workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build:
-    runs-on: ubuntu-24.04
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          target_branch: main
-          build_dir: site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          path: 'site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
