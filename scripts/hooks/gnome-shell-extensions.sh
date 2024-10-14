@@ -9,6 +9,8 @@ pipx install gnome-extensions-cli --system-site-packages
 "$HOME"/.local/bin/gext install emoji-copy@felipeftn
 #forge
 "$HOME"/.local/bin/gext install forge@jmmaranan.com
+#notification banner reloaded
+"$HOME"/.local/bin/gext install notification-banner-reloaded@marcinjakubowski.github.com
 #pano
 "$HOME"/.local/bin/gext install pano@elhan.io
 #status area horizontal spacing
