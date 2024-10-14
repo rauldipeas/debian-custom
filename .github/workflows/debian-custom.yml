@@ -14,6 +14,7 @@ on:
       - '*.svg'
       - '_config.yml'
       - 'site'
+      - '.github/workflows/github-pages.yml'
   schedule:
     - cron:  '0 */12 * * *'
   workflow_dispatch:
