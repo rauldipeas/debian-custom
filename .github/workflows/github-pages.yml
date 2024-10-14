@@ -13,9 +13,9 @@ on:
       - '*.png'
       - '*.svg'
       - '_config.yml'
-      - './assets'
-      - './scripts'
-      - './settings'
+      - 'assets'
+      - 'scripts'
+      - 'settings'
       - '.github/workflows/debian-custom.yml'
   schedule:
     - cron:  '0 */12 * * *'
