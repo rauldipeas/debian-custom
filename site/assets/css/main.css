@@ -2589,6 +2589,7 @@ input, select, textarea {
 			display: inline-block;
 			padding: 1.8em;
 			text-align: center;
+			height: 1em;
 		}
 		
 			ul.major-icons li .caption {
@@ -3353,9 +3354,9 @@ input, select, textarea {
 				text-align: center;
 			}
 
-		/* Two */
+		/* Apps */
 
-			#two {
+			#apps {
 				text-align: center;
 			}
 
