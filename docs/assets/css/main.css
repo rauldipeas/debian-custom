@@ -2732,6 +2732,7 @@ input, select, textarea {
 		text-indent: 0.125em;
 		text-transform: uppercase;
 		white-space: nowrap;
+		transition: transform .3s;
 	}
 
 		input[type="submit"]:hover,
@@ -2740,6 +2741,7 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			background-color: rgba(144, 144, 144, 0.075);
+			transform: scale(1.1);
 		}
 
 		input[type="submit"]:active,
