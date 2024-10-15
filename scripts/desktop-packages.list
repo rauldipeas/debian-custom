@@ -35,6 +35,7 @@ fonts-powerline
 fonts-quicksand
 gnome-themes-extra
 gtk2-engines-murrine
+plymouth-themes
 qt5-gtk2-platformtheme
 
 # gui apps
