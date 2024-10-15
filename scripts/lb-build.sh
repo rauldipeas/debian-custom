@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-cd /tmp/debian-custom
+cd /tmp/debian-rdx
 sudo lb build

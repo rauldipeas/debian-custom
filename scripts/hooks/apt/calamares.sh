@@ -13,7 +13,7 @@ sudo sed -i 's/welcomeStyleCalamares: true/welcomeStyleCalamares: false/g' /etc/
 sudo sed -i 's/windowExpanding: normal/windowExpanding: noexpand/g' /etc/calamares/branding/debian/branding.desc
 sudo sed -i 's/windowSize: 800px,520px/windowSize: 800px,750px/g' /etc/calamares/branding/debian/branding.desc
 sudo cp /usr/share/icons/Papirus/64x64/apps/org.linux_hardware.hw-probe.svg /etc/skel/.face
-sudo wget -q --show-progress -O /etc/calamares/branding/debian/welcome.png https://github.com/rauldipeas/debian-custom/raw/main/assets/calamares-welcome.png
+sudo wget -q --show-progress -O /etc/calamares/branding/debian/welcome.png https://github.com/rauldipeas/debian-rdx/raw/main/assets/calamares-welcome.png
 cat <<EOF |sudo tee /etc/calamares/modules/locale.conf>/dev/null
 geoip:
     style:    "json"
@@ -63,8 +63,8 @@ script:
     - "rm -r /etc/calamares"
 EOF
 sudo chmod +x /usr/sbin/power-manager
-cat <<EOF |sudo tee /etc/live/config.conf.d/debian-custom.conf>/dev/null
-#LIVE_HOSTNAME=debian-custom
+cat <<EOF |sudo tee /etc/live/config.conf.d/debian-rdx.conf>/dev/null
+LIVE_HOSTNAME=debian-rdx
 LIVE_USERNAME=tux
 LIVE_USER_FULLNAME="Tux"
 #LIVE_LOCALES=pt_BR.UTF-8

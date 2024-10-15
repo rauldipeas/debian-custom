@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd /tmp/debian-custom
+cd /tmp/debian-rdx
 lb config \
     --apt-source-archives false \
     --architectures amd64 \
@@ -12,9 +12,9 @@ lb config \
     --debconf-frontend noninteractive \
     --debian-installer none \
     --distribution bookworm \
-    --image-name "debian-custom" \
+    --image-name "debian-rdx" \
     --iso-application "Debian" \
-    --iso-publisher "Debian; https://rauldipeas.surge.sh/debian-custom; debian-custom.rauldipeas@lock.email" \
+    --iso-publisher "Debian; https://rauldipeas.github.io/debian-rdx; debian-rdx.rauldipeas@lock.email" \
     --iso-volume "Debian" \
     --mirror-bootstrap "https://deb.debian.org/debian/" \
     --mirror-binary "https://deb.debian.org/debian/" \

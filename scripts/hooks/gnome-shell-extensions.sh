@@ -17,5 +17,5 @@ pipx install gnome-extensions-cli --system-site-packages
 "$HOME"/.local/bin/gext install status-area-horizontal-spacing@mathematical.coffee.gmail.com
 #user themes
 "$HOME"/.local/bin/gext install user-theme@gnome-shell-extensions.gcampax.github.com
-mkdir -p /opt/custom-user-settings/gnome-shell
-mv /root/.local/share/gnome-shell/extensions /opt/custom-user-settings/gnome-shell/
+mkdir -p /opt/rdx-user-settings/gnome-shell
+mv /root/.local/share/gnome-shell/extensions /opt/rdx-user-settings/gnome-shell/

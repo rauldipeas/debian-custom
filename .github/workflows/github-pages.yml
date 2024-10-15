@@ -16,7 +16,7 @@ on:
       - 'assets'
       - 'scripts'
       - 'settings'
-      - '.github/workflows/debian-custom.yml'
+      - '.github/workflows/debian-rdx.yml'
   schedule:
     - cron:  '0 */12 * * *'
   workflow_dispatch:

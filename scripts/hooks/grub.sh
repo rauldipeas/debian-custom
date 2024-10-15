@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-wget -q --show-progress https://github.com/rauldipeas/debian-custom/raw/main/assets/compressed/debian-1080p.zip
+wget -q --show-progress https://github.com/rauldipeas/debian-rdx/raw/main/assets/compressed/debian-1080p.zip
 sudo mkdir -p /usr/share/grub/themes
 sudo unzip debian-1080p.zip -d /usr/share/grub/themes
 sudo rm debian-1080p.zip /usr/share/grub/themes/darkmatter-theme.py
