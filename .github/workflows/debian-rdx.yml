@@ -33,10 +33,3 @@ jobs:
         run: bash -x scripts/actions-cleanup.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: main
-          build_dir: site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
