@@ -1,41 +1,41 @@
 # cli/tui
-bash-completion #shell dep
-curl #am dep
-liquidprompt #shell dep
-lsb-release #gpu-driver dep
-lshw #gpu-driver dep
-nala #shell dep
-openssh-client #shell dep
-pipx #shell dep
-sd #shell dep
-wget #shell dep
-wmctrl #nyrna dep
-xdotool #nyrna dep
+bash-completion
+curl
+liquidprompt
+lsb-release
+lshw
+nala
+openssh-client
+pipx
+sd
+wget
+wmctrl
+xdotool
 
-# drivers/codecs/servers
-alsa-utils #audio cli tools
-apt-transport-https #apt dep
-btrfs-progs #calamares dep
-dropbear #ssh server
-f2fs-tools #calamares dep
-nohang #system resources reservation
-ntp #network time protocol
-pulseaudio #audio server
-pulseaudio-module-bluetooth #audio server dep
-pulseaudio-module-jack #audio server dep
-torsocks #topgrade dep
-xfsprogs #calamares dep
-xz-utils #compression tool #appimagetool dep (not present yet)
+# drivers/codecs/handlers/servers
+alsa-utils
+apt-transport-https
+btrfs-progs
+dropbear
+f2fs-tools
+nohang
+ntp
+pulseaudio
+pulseaudio-module-bluetooth
+pulseaudio-module-jack
+torsocks
+xfsprogs
+xz-utils
 
 # appearance/themes
 breeze-cursor-theme
-fonts-cantarell #gnome shell dep
-fonts-noto-color-emoji #gnome ext dep
-fonts-powerline #liquidprompt dep
-fonts-quicksand #gnome shell dep
-gnome-themes-extra #fluent gtk theme dep
-gtk2-engines-murrine #fluent gtk theme dep
-qt5-gtk2-platformtheme #fluent gtk theme dep
+fonts-cantarell
+fonts-noto-color-emoji
+fonts-powerline
+fonts-quicksand
+gnome-themes-extra
+gtk2-engines-murrine
+qt5-gtk2-platformtheme
 
 # gui apps
 cheese
@@ -52,16 +52,16 @@ software-properties-gtk
 tilix
 timeshift
 
-# gnome shell deps
-gir1.2-gda-5.0 #pano dep
-gir1.2-gmenu-3.0 #pano dep
-gir1.2-gsound-1.0 #pano dep
-gnome-session #desktop environment session dep
-gnome-software-plugin-flatpak #flathub dep
+# gnome deps
+gir1.2-gda-5.0
+gir1.2-gmenu-3.0
+gir1.2-gsound-1.0
+gnome-session
+gnome-software-plugin-flatpak
 gnome-software-plugin-snap
-libkeybinder-3.0-0 #superpaper dep (not present yet)
+libkeybinder-3.0-0
 
-# gnome shell extensions
+# gnome extensions
 gnome-shell-extension-appindicator
 gnome-shell-extension-dash-to-panel
 gnome-shell-extension-tiling-assistant
