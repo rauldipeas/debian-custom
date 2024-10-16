@@ -49,6 +49,7 @@ gnome-calculator
 gnome-disk-utility
 gnome-network-displays
 nautilus
+policycoreutils-gui
 software-properties-gtk
 sysprof
 tilix
