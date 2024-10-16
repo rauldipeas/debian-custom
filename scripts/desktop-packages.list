@@ -49,7 +49,6 @@ gnome-calculator
 gnome-disk-utility
 gnome-network-displays
 nautilus
-policycoreutils-gui
 software-properties-gtk
 sysprof
 tilix
@@ -65,6 +64,6 @@ gnome-software-plugin-snap
 libkeybinder-3.0-0
 
 # gnome extensions
-gnome-shell-extension-appindicator
 gnome-shell-extension-dash-to-panel
+gnome-shell-extension-gsconnect-browsers
 gnome-shell-extension-tiling-assistant
