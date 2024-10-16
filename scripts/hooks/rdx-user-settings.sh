@@ -6,6 +6,7 @@ wget -qO /opt/rdx-user-settings/bash/bash-preexec.sh https://github.com/rcaloras
 wget -qO /opt/rdx-user-settings/bash/atuin.bash https://github.com/rauldipeas/debian-rdx/raw/main/settings/bash/atuin.bash
 wget -qO /opt/rdx-user-settings/bash/liquidprompt.bash https://github.com/rauldipeas/debian-rdx/raw/main/settings/bash/liquidprompt.bash
 wget -qO /opt/rdx-user-settings/dconf-settings.ini https://github.com/rauldipeas/debian-rdx/raw/main/settings/dconf-settings.ini
+dconf load / < /opt/rdx-user-settings/dconf-settings.ini
 cat <<EOF |sudo tee /etc/profile.d/rdx-user-settings.sh /etc/X11/Xsession.d/90-rdx-user-settings>/dev/null
 if ! [ -f "\$HOME"/.rdx-user-settings ];then
     mkdir -p "\$HOME"/.config/systemd
