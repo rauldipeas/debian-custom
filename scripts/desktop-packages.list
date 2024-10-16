@@ -16,6 +16,7 @@ xdotool
 alsa-utils
 apt-transport-https
 btrfs-progs
+bzip2
 dropbear
 f2fs-tools
 nohang
