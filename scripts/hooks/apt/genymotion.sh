@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
-wget -qO /etc/apt/trusted.gpg.d/genymotion.gpg https://dl.genymotion.com/releases/genymotion/gpg.key
-echo "deb https://dl.genymotion.com/releases/genymotion/ $(lsb_release -cs) main"|sudo tee /etc/apt/sources.list.d/genymotion.list
-sudo apt update
-sudo apt install -y genymotion libglu1-mesa libssl1.1
+sudo apt install -y libglu1-mesa libssl1.1
+wget -q --show-progress -O /tmp/genymotion.bin "$(wget -qO- https://www.genymotion.com/download|grep linux_x64.bin|head -n 1|cut -d '"' -f4)"
+chmod +x /tmp/genymotion.bin
+/tmp/genymotion.bin -y
+rm /tmp/genymotion.bin
