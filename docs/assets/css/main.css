@@ -2590,7 +2590,7 @@ input, select, textarea {
 			padding: 1.8em;
 			text-align: center;
 			height: 1em;
-			transition: transform .1s;
+			transition: transform .2s;
 		}
 		
 		ul.major-icons li:hover {
@@ -3401,7 +3401,7 @@ input, select, textarea {
 
 			ul.major-icons li {
 				padding: 1.5em;
-				transition: transform .1s;
+				transition: transform .2s;
 			}
 
 			ul.major-icons li:hover {
