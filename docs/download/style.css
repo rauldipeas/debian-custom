@@ -5,7 +5,7 @@ FULL SCREEN MODE: http://salehriaz.com/404Page/404.html
 DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
 */
 
-@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500');
 
 @-moz-keyframes rocket-movement { 100% {-moz-transform: translate(1200px,-600px);} }
 @-webkit-keyframes rocket-movement {100% {-webkit-transform: translate(1200px,-600px); } }
@@ -56,7 +56,7 @@ html, body{
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     -webkit-user-select: none; /* Safari 3.1+ */
     -moz-user-select: none; /* Firefox 2+ */
@@ -124,13 +124,13 @@ li a:hover {
 
 .btn-request{
     padding: 10px 25px;
-    border: 1px solid #FFCB39;
+    border: 1px solid #007000;
     border-radius: 100px;
     font-weight: 400;
 }
 
 .btn-request:hover{
-    background-color: #FFCB39;
+    background-color: #007000;
     color: #fff;
     transform: scale(1.05);
     box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
@@ -142,8 +142,8 @@ li a:hover {
     margin: 15px auto;
     width: 150px;
     padding: 10px 15px;
-    border: 1px solid #FFCB39;
-    border-radius: 100px;
+    border: 1px solid #007000;
+    border-radius: 10px;
     font-weight: 400;
     display: block;
     color: white;
@@ -159,7 +159,7 @@ li a:hover {
 }
 
 .btn-go-home:hover{
-    background-color: #FFCB39;
+    background-color: #007000;
     color: #fff;
     transform: scale(1.05);
     box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
