@@ -13,7 +13,8 @@ on:
       - '*.png'
       - '*.svg'
       - '_config.yml'
-      - 'docs/**'
+      - '.github/workflows/surge.yml'
+      - 'site/**'
   schedule:
     - cron:  '0 */12 * * *'
   workflow_dispatch:

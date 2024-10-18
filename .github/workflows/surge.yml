@@ -1,0 +1,34 @@
+name: Surge deploy
+on:
+    push:
+      branches:
+        - 'main'
+      paths-ignore:
+        - '.editorconfig'
+        - '.gitignore'
+        - 'leiame.md'
+        - 'readme.md'
+        - 'to-do.log'
+        - '*.jpg'
+        - '*.png'
+        - '*.svg'
+        - '_config.yml'
+        - '.github/workflows/debian-rdx.yml'
+        - 'assets/**'
+        - 'scripts/**'
+        - 'settings/**'
+    schedule:
+      - cron:  '0 */12 * * *'
+    workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Upload to Surge
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'debian-rdx.surge.sh'
+          project: 'site'
+          login: ${{ secrets.SURGE_LOGIN }}
+          token: ${{ secrets.SURGE_TOKEN }}

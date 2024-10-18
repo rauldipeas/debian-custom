@@ -8,6 +8,7 @@ nala
 openssh-client
 pipx
 sd
+speedtest
 wget
 wmctrl
 xdotool
@@ -21,6 +22,7 @@ dropbear
 f2fs-tools
 nohang
 ntp
+openssh-sftp-server
 pulseaudio
 pulseaudio-module-bluetooth
 pulseaudio-module-jack
